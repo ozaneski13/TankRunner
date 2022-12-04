@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Car_Jump : MonoBehaviour
+public class Tank_Jump : MonoBehaviour
 {
     [SerializeField] private float _jumpForce = 5f;
     private Rigidbody _rb = null;
