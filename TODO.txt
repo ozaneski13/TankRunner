@@ -1,0 +1,17 @@
+TODO
+
+Add new cars to Road_Environment_2
+Add trees with base to Road environments
+Camera System (Just follow up behind)
+Procedural road spawning
+Lane system + swipe mechanic integration + Player?
+Point system (Collectables + distance)
+Car spawning system + randomness
+Collectable gold or tool
+Collectable super powers
+Super powers mechanics (Jump-Fire-Buldozer-Speed up etc.)
+UI (main manu - pause menu - market?)
+Voices (UI - Mechanics -Music)
+
+Cinemachine?
+Add light to street lambs at night time?
