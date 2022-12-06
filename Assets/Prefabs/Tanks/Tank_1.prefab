@@ -40,6 +40,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3201522950875699465}
+  - component: {fileID: 9185033679877080912}
+  - component: {fileID: 276510717782225883}
+  - component: {fileID: 6608432747011603318}
   m_Layer: 0
   m_Name: Tank_1
   m_TagString: Untagged
@@ -62,6 +65,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9185033679877080912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4707453467647229438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a97485b97f7beb640a8139267ec3f88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _wheels:
+  - {fileID: 2181798600093161654}
+  - {fileID: 1244602424104416298}
+  _spinCoef: 3
+  _speed: 40
+--- !u!54 &276510717782225883
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4707453467647229438}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!65 &6608432747011603318
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4707453467647229438}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.8, z: 1}
+  m_Center: {x: 0, y: 0.4, z: 0}
 --- !u!1001 &9155987159519039964
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -122,5 +171,15 @@ PrefabInstance:
 --- !u!4 &8690294383558719031 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bf3332cd5a6cff64fb234e002bb641ec, type: 3}
+  m_PrefabInstance: {fileID: 9155987159519039964}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2181798600093161654 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7014311939921987946, guid: bf3332cd5a6cff64fb234e002bb641ec, type: 3}
+  m_PrefabInstance: {fileID: 9155987159519039964}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1244602424104416298 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7950311848182474230, guid: bf3332cd5a6cff64fb234e002bb641ec, type: 3}
   m_PrefabInstance: {fileID: 9155987159519039964}
   m_PrefabAsset: {fileID: 0}
