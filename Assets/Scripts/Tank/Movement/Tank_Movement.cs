@@ -2,7 +2,10 @@ using UnityEngine;
 
 public class Tank_Movement : MonoBehaviour
 {
-    [SerializeField] private float _speed = 5f;
+    [SerializeField] private Transform[] _wheels = null;
+    [SerializeField] private float _spinCoef = 3f;
+
+    [SerializeField] private float _speed = 40f;
 
     private Rigidbody _rb = null;
 
@@ -63,6 +66,8 @@ public class Tank_Movement : MonoBehaviour
 
             Reset();
         }
+
+        RotateWheels();
     }
 
     private void FixedUpdate()
@@ -76,5 +81,15 @@ public class Tank_Movement : MonoBehaviour
     {
         _startTouch = _swipeDelta = Vector2.zero;
         _isDragging = false;
+    }
+
+    private void RotateWheels()
+    {
+        float _spinRotation = -_speed * _spinCoef;
+
+        foreach(Transform transform in _wheels)
+        {
+            transform.Rotate(_spinRotation * Time.deltaTime, 0, 0);
+        }
     }
 }
