@@ -1,10 +1,16 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Tank_Movement : MonoBehaviour
 {
+    [Header("Lane Controller")]
+    [SerializeField] private LaneController _laneController = null;
+
+    [Header("Rotate Settings")]
     [SerializeField] private Transform[] _wheels = null;
     [SerializeField] private float _spinCoef = 3f;
 
+    [Header("Speed Settings")]
     [SerializeField] private float _speed = 40f;
 
     private Rigidbody _rb = null;
@@ -12,16 +18,36 @@ public class Tank_Movement : MonoBehaviour
     private Vector2 _startTouch;
     private Vector2 _swipeDelta;
 
+    private List<int> _lanesXCoords = null;
+    private int _currentLaneIndex;
+
     private bool _isDragging = false;
-    private bool _swipeLeft;
-    private bool _swipeRight;
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
     }
 
+    private void Start()
+    {
+        GetLanes();
+    }
+
     private void Update()
+    {
+        CheckSwipe();
+
+        RotateWheels();
+    }
+
+    private void FixedUpdate()
+    {
+        Vector3 velocity = (transform.forward) * _speed * Time.fixedDeltaTime;
+        velocity.y = _rb.velocity.y;
+        _rb.velocity = velocity;
+    }
+
+    private void CheckSwipe()
     {
         if (Input.touches.Length > 0)
         {
@@ -58,23 +84,37 @@ public class Tank_Movement : MonoBehaviour
             if (Mathf.Abs(x) > Mathf.Abs(y))
             {
                 if (x < 0)
-                    Debug.Log("Swipe Left"); //_swipeLeft = true;
+                {
+                    if (_currentLaneIndex != 0)
+                    {
+                        _currentLaneIndex--;
+
+                        transform.position = new Vector3(_lanesXCoords[_currentLaneIndex], transform.position.y, transform.position.z);
+                    }
+                }
 
                 else
-                    Debug.Log("Swipe Right"); //_swipeRight = true;
+                {
+                    if (_currentLaneIndex != _lanesXCoords.Count - 1)
+                    {
+                        _currentLaneIndex++;
+
+                        transform.position = new Vector3(_lanesXCoords[_currentLaneIndex], transform.position.y, transform.position.z);
+                    }
+                }
             }
 
             Reset();
         }
-
-        RotateWheels();
     }
 
-    private void FixedUpdate()
+    private void GetLanes()
     {
-        Vector3 velocity = (transform.forward) * _speed * Time.fixedDeltaTime;
-        velocity.y = _rb.velocity.y;
-        _rb.velocity = velocity;
+        _lanesXCoords = _laneController.LanesXCoord;
+
+        foreach (int lanePosition in _lanesXCoords)
+            if (transform.position.x == lanePosition)
+                _currentLaneIndex = _lanesXCoords.FindIndex(a => a == lanePosition);
     }
 
     private void Reset()
