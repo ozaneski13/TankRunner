@@ -1,9 +1,8 @@
 TODO
 
+Try dotween jump
 Add new cars to Road_Environment_2
 Add trees with base to Road environments
-Procedural road spawning + pool
-Lane system + swipe mechanic integration + Player?
 Point system (Collectables + distance)
 Car spawning system + randomness
 Collectable gold or tool

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Tank_Movement : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Tank_Movement : MonoBehaviour
 
     [Header("Speed Settings")]
     [SerializeField] private float _speed = 40f;
+    [SerializeField] private float _laneChangeDuration = 0.5f;
 
     private Rigidbody _rb = null;
 
@@ -41,6 +43,11 @@ public class Tank_Movement : MonoBehaviour
     }
 
     private void FixedUpdate()
+    {
+        MoveForward();
+    }
+
+    private void MoveForward()
     {
         Vector3 velocity = (transform.forward) * _speed * Time.fixedDeltaTime;
         velocity.y = _rb.velocity.y;
@@ -86,22 +93,16 @@ public class Tank_Movement : MonoBehaviour
                 if (x < 0)
                 {
                     if (_currentLaneIndex != 0)
-                    {
                         _currentLaneIndex--;
-
-                        transform.position = new Vector3(_lanesXCoords[_currentLaneIndex], transform.position.y, transform.position.z);
-                    }
                 }
 
                 else
                 {
                     if (_currentLaneIndex != _lanesXCoords.Count - 1)
-                    {
                         _currentLaneIndex++;
-
-                        transform.position = new Vector3(_lanesXCoords[_currentLaneIndex], transform.position.y, transform.position.z);
-                    }
                 }
+
+                transform.DOMoveX(_lanesXCoords[_currentLaneIndex], _laneChangeDuration, false);
             }
 
             Reset();
