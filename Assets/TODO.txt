@@ -7,9 +7,12 @@ Point system (Collectables + distance)
 Car spawning system + randomness
 Collectable gold or tool
 Collectable super powers
+Save system
 Super powers mechanics (Jump-Fire-Buldozer-Speed up etc.)
+Market
 UI (main manu - pause menu - market?)
 Voices (UI - Mechanics -Music)
 
+Day-Night?
 Cinemachine?
 Add light to street lambs at night time?
