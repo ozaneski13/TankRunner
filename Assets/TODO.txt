@@ -1,5 +1,7 @@
-TODO
+﻿TODO
 
+road generator spawns only 1 prefab pooling
+ortası yeşilli road prefabi
 Try dotween jump
 Add new cars to Road_Environment_2
 Add trees with base to Road environments
@@ -11,7 +13,7 @@ Save system
 Super powers mechanics (Jump-Fire-Buldozer-Speed up etc.)
 Market
 UI (main manu - pause menu - market?)
-Voices (UI - Mechanics -Music)
+Voices (UI - Mechanics - Music)
 
 Day-Night?
 Cinemachine?
