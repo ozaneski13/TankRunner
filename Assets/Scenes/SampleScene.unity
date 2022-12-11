@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_Environment_2 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6967286863402549458, guid: 46dcc1977abc8d0419a1771ee780946e, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46dcc1977abc8d0419a1771ee780946e, type: 3}
 --- !u!4 &48531940 stripped
@@ -240,6 +244,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_Environment_2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6967286863402549458, guid: 46dcc1977abc8d0419a1771ee780946e, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46dcc1977abc8d0419a1771ee780946e, type: 3}
 --- !u!1001 &130381980
@@ -296,6 +304,10 @@ PrefabInstance:
     - target: {fileID: 6967286863402549458, guid: 46dcc1977abc8d0419a1771ee780946e, type: 3}
       propertyPath: m_Name
       value: Road_Environment_2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6967286863402549458, guid: 46dcc1977abc8d0419a1771ee780946e, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46dcc1977abc8d0419a1771ee780946e, type: 3}
@@ -368,6 +380,7 @@ GameObject:
   - component: {fileID: 156697248}
   - component: {fileID: 156697247}
   - component: {fileID: 156697246}
+  - component: {fileID: 156697249}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Tank
@@ -438,6 +451,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.8, z: 1}
   m_Center: {x: 0, y: 0.4, z: 0}
+--- !u!114 &156697249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156697244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 605d1aa31b463b14a978f13b57f43c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _jumpForce: 5
 --- !u!4 &156812169 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6967286863402549457, guid: 46dcc1977abc8d0419a1771ee780946e, type: 3}
@@ -498,6 +524,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_Environment_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8511846693522394054, guid: a608a57e96b8b31448fb152b9b877547, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a608a57e96b8b31448fb152b9b877547, type: 3}
 --- !u!1001 &165785483
@@ -554,6 +584,10 @@ PrefabInstance:
     - target: {fileID: 8511846693522394054, guid: a608a57e96b8b31448fb152b9b877547, type: 3}
       propertyPath: m_Name
       value: Road_Environment_1 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511846693522394054, guid: a608a57e96b8b31448fb152b9b877547, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a608a57e96b8b31448fb152b9b877547, type: 3}
@@ -621,6 +655,10 @@ PrefabInstance:
     - target: {fileID: 8511846693522394054, guid: a608a57e96b8b31448fb152b9b877547, type: 3}
       propertyPath: m_Name
       value: Road_Environment_1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511846693522394054, guid: a608a57e96b8b31448fb152b9b877547, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a608a57e96b8b31448fb152b9b877547, type: 3}
@@ -749,6 +787,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_Environment_1 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8511846693522394054, guid: a608a57e96b8b31448fb152b9b877547, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a608a57e96b8b31448fb152b9b877547, type: 3}
 --- !u!1001 &686664005
@@ -806,6 +848,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_Environment_2
       objectReference: {fileID: 0}
+    - target: {fileID: 6967286863402549458, guid: 46dcc1977abc8d0419a1771ee780946e, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46dcc1977abc8d0419a1771ee780946e, type: 3}
 --- !u!1001 &693272237
@@ -862,6 +908,10 @@ PrefabInstance:
     - target: {fileID: 8511846693522394054, guid: a608a57e96b8b31448fb152b9b877547, type: 3}
       propertyPath: m_Name
       value: Road_Environment_1 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511846693522394054, guid: a608a57e96b8b31448fb152b9b877547, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a608a57e96b8b31448fb152b9b877547, type: 3}
@@ -1049,6 +1099,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_Environment_1
       objectReference: {fileID: 0}
+    - target: {fileID: 8511846693522394054, guid: a608a57e96b8b31448fb152b9b877547, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a608a57e96b8b31448fb152b9b877547, type: 3}
 --- !u!1 &786263531
@@ -1142,6 +1196,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_Environment_1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8511846693522394054, guid: a608a57e96b8b31448fb152b9b877547, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a608a57e96b8b31448fb152b9b877547, type: 3}
 --- !u!1001 &945781473
@@ -1198,6 +1256,10 @@ PrefabInstance:
     - target: {fileID: 8511846693522394054, guid: a608a57e96b8b31448fb152b9b877547, type: 3}
       propertyPath: m_Name
       value: Road_Environment_1 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511846693522394054, guid: a608a57e96b8b31448fb152b9b877547, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a608a57e96b8b31448fb152b9b877547, type: 3}
@@ -1339,6 +1401,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_Environment_2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6967286863402549458, guid: 46dcc1977abc8d0419a1771ee780946e, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46dcc1977abc8d0419a1771ee780946e, type: 3}
 --- !u!4 &1140915056 stripped
@@ -1400,6 +1466,10 @@ PrefabInstance:
     - target: {fileID: 6967286863402549458, guid: 46dcc1977abc8d0419a1771ee780946e, type: 3}
       propertyPath: m_Name
       value: Road_Environment_2 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6967286863402549458, guid: 46dcc1977abc8d0419a1771ee780946e, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46dcc1977abc8d0419a1771ee780946e, type: 3}
@@ -1478,6 +1548,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_Environment_2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6967286863402549458, guid: 46dcc1977abc8d0419a1771ee780946e, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46dcc1977abc8d0419a1771ee780946e, type: 3}
 --- !u!4 &1675443098 stripped
@@ -1539,6 +1613,10 @@ PrefabInstance:
     - target: {fileID: 8511846693522394054, guid: a608a57e96b8b31448fb152b9b877547, type: 3}
       propertyPath: m_Name
       value: Road_Environment_1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511846693522394054, guid: a608a57e96b8b31448fb152b9b877547, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a608a57e96b8b31448fb152b9b877547, type: 3}
@@ -1628,6 +1706,10 @@ PrefabInstance:
     - target: {fileID: 6967286863402549458, guid: 46dcc1977abc8d0419a1771ee780946e, type: 3}
       propertyPath: m_Name
       value: Road_Environment_2 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6967286863402549458, guid: 46dcc1977abc8d0419a1771ee780946e, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46dcc1977abc8d0419a1771ee780946e, type: 3}
@@ -1750,6 +1832,10 @@ PrefabInstance:
     - target: {fileID: 8511846693522394054, guid: a608a57e96b8b31448fb152b9b877547, type: 3}
       propertyPath: m_Name
       value: Road_Environment_1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511846693522394054, guid: a608a57e96b8b31448fb152b9b877547, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a608a57e96b8b31448fb152b9b877547, type: 3}
@@ -1929,6 +2015,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_Environment_2 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 6967286863402549458, guid: 46dcc1977abc8d0419a1771ee780946e, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46dcc1977abc8d0419a1771ee780946e, type: 3}
 --- !u!1001 &2066404274
@@ -1985,6 +2075,10 @@ PrefabInstance:
     - target: {fileID: 6967286863402549458, guid: 46dcc1977abc8d0419a1771ee780946e, type: 3}
       propertyPath: m_Name
       value: Road_Environment_2 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6967286863402549458, guid: 46dcc1977abc8d0419a1771ee780946e, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46dcc1977abc8d0419a1771ee780946e, type: 3}

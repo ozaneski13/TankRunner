@@ -3,6 +3,7 @@ using UnityEngine;
 public class Road : MonoBehaviour
 {
     [SerializeField] private ERoad _roadEnvironmentType = ERoad.Default;
+    public ERoad RoadEnvironmentType => _roadEnvironmentType;
 
     private RoadManager _roadManager = null;
 

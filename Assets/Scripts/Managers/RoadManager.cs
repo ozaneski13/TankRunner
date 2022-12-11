@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class RoadManager : MonoBehaviour
@@ -32,6 +34,7 @@ public class RoadManager : MonoBehaviour
     private List<Transform> _activatedRoadEnvironments = new List<Transform>();
 
     private Transform _roadToDelete = null;
+    private Transform _lastRoad = null;
 
     private Vector3 _phaseStartingPosition = Vector3.zero;
     private Vector3 _currentPosition = Vector3.zero;
@@ -44,6 +47,7 @@ public class RoadManager : MonoBehaviour
         _currentPosition = _phaseStartingPosition;
 
         _roadToDelete = _penultimateRoad;
+        _lastRoad = _lastPreCreatedRoad;
     }
 
     private void CreatePool()
@@ -58,21 +62,39 @@ public class RoadManager : MonoBehaviour
                 _roadEnvironmentPool.Add(roadEnviromentPoolMember);
             }
         }
+
+        Shuffle();
+    }
+
+    private void Shuffle()
+    {
+        var random = new System.Random();
+
+        _roadEnvironmentPool = _roadEnvironmentPool.OrderBy(_ => random.Next()).ToList();
     }
 
     private void CreateNextPhase()
     {
         Vector3 newPosition = _currentPosition + new Vector3(0, 0, _environmentOffset);
 
-        GameObject nextRoad = _roadEnvironmentPool[0].gameObject;
-        nextRoad.transform.parent = _roadEnvironmentParent;
-        nextRoad.transform.position = newPosition;
-        nextRoad.SetActive(true);
+        foreach (Transform roadEnvironment in _roadEnvironmentPool)
+        {
+            if (_lastRoad.GetComponent<Road>().RoadEnvironmentType != roadEnvironment.GetComponent<Road>().RoadEnvironmentType)
+            {
+                GameObject nextRoad = _roadEnvironmentPool[0].gameObject;
+                nextRoad.transform.parent = _roadEnvironmentParent;
+                nextRoad.transform.position = newPosition;
+                nextRoad.SetActive(true);
 
-        _roadEnvironmentPool.Remove(_roadEnvironmentPool[0]);
-        _activatedRoadEnvironments.Add(nextRoad.transform);
+                _roadEnvironmentPool.Remove(_roadEnvironmentPool[0]);
+                _activatedRoadEnvironments.Add(nextRoad.transform);
 
-        _currentPosition = newPosition;
+                _currentPosition = newPosition;
+                _lastRoad = nextRoad.transform;
+
+                break;
+            }
+        }
     }
 
     public void DeletePassedPhases(Transform passedRoad)
@@ -86,7 +108,5 @@ public class RoadManager : MonoBehaviour
         _roadToDelete = passedRoad;
 
         CreateNextPhase();
-
-        //Call when collider is passed
     }
 }

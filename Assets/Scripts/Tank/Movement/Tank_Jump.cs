@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class Tank_Jump : MonoBehaviour
 {
-    [SerializeField] private float _jumpForce = 5f;
+    [SerializeField] private float _jumpForce = 200f;
     private Rigidbody _rb = null;
 
-    private bool _isGrounded = false;
+    private bool _isGrounded = true;
 
     private void Awake()
     {
@@ -28,7 +28,6 @@ public class Tank_Jump : MonoBehaviour
         if (!_isGrounded)
             return;
 
-        Debug.Log(transform.up * _jumpForce);
         _rb.AddForce(transform.up * _jumpForce);
     }
 

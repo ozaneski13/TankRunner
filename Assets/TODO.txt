@@ -1,8 +1,7 @@
 ﻿TODO
 
-road generator spawns only 1 prefab pooling
-ortası yeşilli road prefabi
 Try dotween jump
+ortası yeşilli road prefabi
 Add new cars to Road_Environment_2
 Add trees with base to Road environments
 Point system (Collectables + distance)
