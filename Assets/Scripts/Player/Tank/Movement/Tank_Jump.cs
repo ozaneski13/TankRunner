@@ -33,7 +33,7 @@ public class Tank_Jump : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == ("Ground"))
+        if (collision.gameObject.tag == "Ground")
         {
             _isGrounded = true;
         }
@@ -41,7 +41,7 @@ public class Tank_Jump : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.tag == ("Ground"))
+        if (collision.gameObject.tag == "Ground")
         {
             _isGrounded = false;
         }
