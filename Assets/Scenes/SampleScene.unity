@@ -690,6 +690,9 @@ GameObject:
   m_Component:
   - component: {fileID: 384066603}
   - component: {fileID: 384066604}
+  - component: {fileID: 384066606}
+  - component: {fileID: 384066605}
+  - component: {fileID: 384066607}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -725,6 +728,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lanesXCoords: feffffffffffffff000000000100000002000000
+--- !u!114 &384066605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384066602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65d1644034bb95b43a6aff95c16ccc3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &384066606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384066602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22c42ed92e29b1145a9de2b554daafec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _powerUpController: {fileID: 384066605}
+--- !u!114 &384066607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384066602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb1bb8035498e884c9d4e88cd24dfca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _doubleTapThreshold: 0.3
 --- !u!4 &386175614 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6967286863402549457, guid: 46dcc1977abc8d0419a1771ee780946e, type: 3}
@@ -1391,11 +1432,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27812da736db3c844b463bbdc06de2d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _meshRenderer: {fileID: 982603226}
-  _collider: {fileID: 982603225}
   _powerUpDuration: 5
   _fireCount: 3
-  _doubleTapThreshold: 0.3
 --- !u!65 &982603225
 BoxCollider:
   m_ObjectHideFlags: 0

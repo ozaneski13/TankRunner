@@ -1,9 +1,9 @@
-using UnityEngine;
-
 public class PowerUp_Buldozer : PowerUps
 {
-    public override void Collected(GameObject tank)
+    public override void CollectableCollected()
     {
-        base.Collected(tank);
+        base.CollectableCollected();
+
+        _player.PowerUpController.StartPowerUp_Buldoze(_powerUpDuration);
     }
 }
