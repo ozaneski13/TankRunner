@@ -54,6 +54,7 @@ public class PowerUpController : MonoBehaviour
             return;
 
         _powerUpUseCount--;
+        //Jump
 
         if (_powerUpUseCount == 0)
             StopCoroutine(_powerUpRoutine);

@@ -14,18 +14,7 @@ public class Tank_Jump : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
     }
 
-    private void Update()
-    {
-        if(Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0);
-
-            if (touch.phase == TouchPhase.Began)
-                Jump();
-        }
-    }
-
-    private void Jump()
+    public void Jump()
     {
         if (!_isGrounded)
             return;
