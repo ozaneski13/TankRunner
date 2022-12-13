@@ -1,9 +1,7 @@
-using UnityEngine;
-
 public class Usable_Coin : Usables
 {
-    public override void Collected(GameObject tank)
+    public override void CollectableCollected()
     {
-        base.Collected(tank);
+        base.CollectableCollected();
     }
 }

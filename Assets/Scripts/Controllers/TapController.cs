@@ -34,13 +34,13 @@ public class TapController : MonoBehaviour
         if (_tapCount == 1)
         {
             _tapCount = 0;
-            _player.Jump();
+            _player.PowerUpController.Jump();
         }
 
         else if (_tapCount == 2)
         {
             _tapCount = 0;
-            _player.Fire();
+            _player.PowerUpController.Fire();
         }
     }
 }

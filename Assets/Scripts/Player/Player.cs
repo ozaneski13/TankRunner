@@ -11,18 +11,7 @@ public class Player : MonoBehaviour
     }
     #endregion
 
-    public void Fire()
-    {
-
-    }
-
-    public void Jump()
-    {
-
-    }
-
-    public void Buldozer()
-    {
-
-    }
+    [Header("Controllers")]
+    [SerializeField] private PowerUpController _powerUpController = null;
+    public PowerUpController PowerUpController => _powerUpController;
 }

@@ -27,7 +27,7 @@ public class RoadManager : MonoBehaviour
     [Header("Phase Starting Point")]
     [SerializeField] private Transform _lastPreCreatedRoad = null;
 
-    [Header("Penultiamte Point")]
+    [Header("Penultimate Point")]
     [SerializeField] private Transform _penultimateRoad = null;
 
     private List<Transform> _activatedRoadEnvironments = new List<Transform>();

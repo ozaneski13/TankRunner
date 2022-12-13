@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class Tank_Jump : MonoBehaviour
 {
+    [Header("Jump Settings")]
     [SerializeField] private float _jumpForce = 200f;
+
     private Rigidbody _rb = null;
 
     private bool _isGrounded = true;

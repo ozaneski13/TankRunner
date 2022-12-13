@@ -1,11 +1,9 @@
-using UnityEngine;
-
 public class Usable_Health : Usables
 {
-    public override void Collected(GameObject tank)
+    public override void CollectableCollected()
     {
-        base.Collected(tank);
+        base.CollectableCollected();
 
-        tank.GetComponent<Tank_Health>().IncreaseHealth();
+        //_player.Tank_Health
     }
 }
