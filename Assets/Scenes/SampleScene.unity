@@ -459,7 +459,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156697244}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 605d1aa31b463b14a978f13b57f43c02, type: 3}
   m_Name: 
@@ -1388,9 +1388,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 982603223}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5605a4721bb439e4897b8fc0e8cbfedd, type: 3}
+  m_Script: {fileID: 11500000, guid: 27812da736db3c844b463bbdc06de2d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _meshRenderer: {fileID: 982603226}
+  _collider: {fileID: 982603225}
+  _powerUpDuration: 5
+  _fireCount: 3
+  _doubleTapThreshold: 0.3
 --- !u!65 &982603225
 BoxCollider:
   m_ObjectHideFlags: 0
