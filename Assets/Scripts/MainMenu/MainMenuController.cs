@@ -12,7 +12,7 @@ public class MainMenuController : MonoBehaviour
 
     public void OpenMarket()
     {
-        Debug.Log("Open Market Work in Progress");
+        SceneManager.LoadScene("MarketScene");
     }
 
     public void QuitGame()
