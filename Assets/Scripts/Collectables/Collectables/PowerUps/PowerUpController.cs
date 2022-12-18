@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class PowerUpController : MonoBehaviour
 {
+    [Header("Tank")]
+    [SerializeField] private Tank _tank = null;
+
     private IEnumerator _powerUpRoutine = null;
 
     private int _powerUpUseCount = 0;
@@ -33,7 +36,7 @@ public class PowerUpController : MonoBehaviour
 
         _powerUpUseCount--;
 
-        //Fire
+        _tank.TankFire.Fire();
 
         if (_powerUpUseCount == 0)
             StopCoroutine(_powerUpRoutine);
@@ -54,7 +57,8 @@ public class PowerUpController : MonoBehaviour
             return;
 
         _powerUpUseCount--;
-        //Jump
+
+        _tank.TankJump.Jump();
 
         if (_powerUpUseCount == 0)
             StopCoroutine(_powerUpRoutine);
@@ -71,5 +75,7 @@ public class PowerUpController : MonoBehaviour
     {
         if (!_canUsePowerUp)
             return;
+        
+        //Buldoze
     }
 }
