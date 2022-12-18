@@ -1,20 +1,20 @@
 ﻿TODO
 
-ortası kapalı yol için roadmanager update -> çarpınca can azalt/yavaşlat/kaybettir
-ortası yeşilli road prefabi
-Add new cars to Road_Environment_2
-Add trees with base to Road environments
+zamanla hızlan
+Jump sırasında buldoze etkisi
+çarpınca can azalt/yavaşlat/kaybettir
 Point system (Collectables + distance)
 Car spawning system + randomness -> spawn pointleri random aktive et
-Collectable gold or tool
-Collectable super powers
-Collectable spawn system
+
 Save system -> Collected coin / bought tanks / high score
 Super powers mechanics (Jump-Fire-Buldozer-Speed up etc.) -> Zıplayınca altta kalanları ez / Belli bir uzaklığa kadar ateş et yoldakiler yok olsun sınırlı mermi sayısı/ Belli süre boyunca ez geç / Hızlan?
-Market
-UI (main manu - pause menu - market?)
-Voices (UI - Mechanics - Music)
+Sounds in Mechanics
 
-Day-Night?
+UI (main manu - pause menu - market?)
+Sounds UI Main menu/ingame Music
+Fog effect
+Market
+
 Cinemachine?
+Day-Night?
 Add light to street lambs at night time?
