@@ -12,6 +12,9 @@ public class Tank : MonoBehaviour
     [SerializeField] private Tank_Health _tankHealth = null;
     public Tank_Health TankHealth => _tankHealth;
 
+    [SerializeField] private Tank_Movement _tankMovement = null;
+    public Tank_Movement TankMovement => _tankMovement;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag != "Collectable")

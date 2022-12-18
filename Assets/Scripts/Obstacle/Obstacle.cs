@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
+    [Header("Obstacle Settings")]
+    [SerializeField] private int _pointForDestroy = 10;
+
     private void OnEnable()
     {
         GetComponentInChildren<MeshRenderer>().enabled = true;
@@ -21,7 +24,6 @@ public class Obstacle : MonoBehaviour
         GetComponentInChildren<MeshRenderer>().enabled = false;
         GetComponentInChildren<Collider>().enabled = false;
 
-        //Turn off mesh renderer and collider. Open it before road generation
         //Start blow up animation
         //Increase points
     }

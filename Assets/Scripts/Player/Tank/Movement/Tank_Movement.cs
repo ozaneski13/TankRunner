@@ -12,13 +12,17 @@ public class Tank_Movement : MonoBehaviour
     [SerializeField] private float _spinCoef = 3f;
 
     [Header("Speed Settings")]
-    [SerializeField] private float _speed = 40f;
+    [SerializeField] private float _startSpeed = 40f;
+    [SerializeField] private float _maxSpeed = 120f;
+    [SerializeField] private int _speedUpCount = 4;
     [SerializeField] private float _laneChangeDuration = 0.5f;
 
     private Rigidbody _rb = null;
 
     private Vector2 _startTouch;
     private Vector2 _swipeDelta;
+
+    private float _currentSpeed = 0f;
 
     private List<int> _lanesXCoords = null;
     private int _currentLaneIndex;
@@ -32,6 +36,8 @@ public class Tank_Movement : MonoBehaviour
 
     private void Start()
     {
+        _currentSpeed = _startSpeed;
+
         GetLanes();
     }
 
@@ -49,7 +55,7 @@ public class Tank_Movement : MonoBehaviour
 
     private void MoveForward()
     {
-        Vector3 velocity = (transform.forward) * _speed * Time.fixedDeltaTime;
+        Vector3 velocity = (transform.forward) * _currentSpeed * Time.fixedDeltaTime;
         velocity.y = _rb.velocity.y;
         _rb.velocity = velocity;
     }
@@ -126,11 +132,16 @@ public class Tank_Movement : MonoBehaviour
 
     private void RotateWheels()
     {
-        float _spinRotation = -_speed * _spinCoef;
+        float _spinRotation = -_startSpeed * _spinCoef;
 
         foreach(Transform transform in _wheels)
         {
             transform.Rotate(_spinRotation * Time.deltaTime, 0, 0);
         }
+    }
+
+    public void ChangeSpeed()
+    {
+        _currentSpeed += (_maxSpeed - _startSpeed) / _speedUpCount;
     }
 }
