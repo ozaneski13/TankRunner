@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class PowerUpController : MonoBehaviour
 {
+    [Header("Reload Duration of Gun")]
+    [SerializeField] private float _reloadDutaion = 0.5f;
+
     private Player _player = null;
 
     private Tank _tank = null;
@@ -10,6 +13,8 @@ public class PowerUpController : MonoBehaviour
     private IEnumerator _powerUpRoutine = null;
 
     private int _powerUpUseCount = 0;
+
+    private bool _canShoot = true;
     private bool _canUsePowerUp = true;
 
     private void Start()
@@ -22,7 +27,9 @@ public class PowerUpController : MonoBehaviour
     private IEnumerator PowerUpRoutine(float duration, EStatus newStatus)
     {
         _tank.SetStatus(newStatus);
-        _canUsePowerUp = false;
+
+        if(newStatus == EStatus.Buldozer)
+            _tank.BuldozeStatus(true);
 
         yield return new WaitForSeconds(duration);
 
@@ -35,6 +42,9 @@ public class PowerUpController : MonoBehaviour
 
     public void StartPowerUp_Fire(int fireCount, float powerUpDuration)
     {
+        if (!_canUsePowerUp)
+            return;
+
         _powerUpUseCount = fireCount;
 
         _powerUpRoutine = PowerUpRoutine(powerUpDuration, EStatus.Fire);
@@ -44,19 +54,40 @@ public class PowerUpController : MonoBehaviour
 
     public void Fire()
     {
-        if (!_canUsePowerUp || _powerUpUseCount == 0)
-            return;
+        if (_powerUpUseCount != 0 && _canShoot)
+        {
+            _powerUpUseCount--;
 
-        _powerUpUseCount--;
+            _tank.TankFire.Fire();
 
-        _tank.TankFire.Fire();
+            StartCoroutine(ReloadRoutine());
+        }
 
-        if (_powerUpUseCount == 0)
+        else if (_powerUpUseCount == 0)
+        {
             StopCoroutine(_powerUpRoutine);
+
+            _canUsePowerUp = true;
+            _tank.SetStatus(EStatus.Normal);
+        }
+    }
+
+    private IEnumerator ReloadRoutine()
+    {
+        _canShoot = false;
+
+        yield return new WaitForSeconds(_reloadDutaion);
+
+        _canShoot = true;
     }
 
     public void StartPowerUp_Jump(int jumpCount, float powerUpDuration)
     {
+        if (!_canUsePowerUp)
+            return;
+
+        _canUsePowerUp = false;
+
         _powerUpUseCount = jumpCount;
 
         _powerUpRoutine = PowerUpRoutine(powerUpDuration, EStatus.Jump);
@@ -66,29 +97,29 @@ public class PowerUpController : MonoBehaviour
 
     public void Jump()
     {
-        if (!_canUsePowerUp || _powerUpUseCount == 0)
-            return;
+        if (_tank.TankJump.IsGrounded && _tank.GetStatus() == EStatus.Jump && _powerUpUseCount != 0)
+        {
+            _tank.TankJump.Jump();
 
-        _powerUpUseCount--;
+            _powerUpUseCount--;
+        }
 
-        _tank.TankJump.Jump();
-
-        if (_powerUpUseCount == 0)
+        else if (_powerUpUseCount == 0)
+        {
             StopCoroutine(_powerUpRoutine);
+
+            _canUsePowerUp = true;
+            _tank.SetStatus(EStatus.Normal);
+        }
     }
 
     public void StartPowerUp_Buldoze(float powerUpDuration)
     {
-        _powerUpRoutine = PowerUpRoutine(powerUpDuration, EStatus.Buldozer);
-
-        StartCoroutine(_powerUpRoutine);
-    }
-
-    public void Buldoze()
-    {
         if (!_canUsePowerUp)
             return;
 
-        _tank.BuldozeStatus(true);
+        _powerUpRoutine = PowerUpRoutine(powerUpDuration, EStatus.Buldozer);
+
+        StartCoroutine(_powerUpRoutine);
     }
 }

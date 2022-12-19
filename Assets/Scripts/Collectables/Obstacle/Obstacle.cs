@@ -21,10 +21,11 @@ public class Obstacle : Collectable
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag != "Player")
+        if (other.gameObject.tag != "Tank")
             return;
 
-        gameObject.SetActive(false);
+        GetComponentInChildren<MeshRenderer>().enabled = false;
+        GetComponentInChildren<Collider>().enabled = false;
     }
 
     public override void PlayerCollided()

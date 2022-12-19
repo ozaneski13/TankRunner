@@ -40,21 +40,22 @@ public class Tank : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag != "Collectable")
+        if (other.gameObject.tag != "Obstacle")
             return;
         
-        if (_currentStatus == EStatus.Normal && !_isImmune)
+        if (!_isImmune)
         {
             _tankHealth.DecreaseHealth();
-
+            
             _tankMovement.Crashed();
-
+            
             StartCoroutine(ImmuneRoutine());
         }
     }
 
     public void SetStatus(EStatus newStatus) => _currentStatus = newStatus;
-    
+    public EStatus GetStatus() => _currentStatus;
+
     private IEnumerator ImmuneRoutine()
     {
         _isImmune = true;
@@ -77,9 +78,11 @@ public class Tank : MonoBehaviour
 
         if (_currentStatus == EStatus.Buldozer)
             _cinemachineController.ShakeCamera(_intensity);
-        else
+
+        else if (_currentStatus == EStatus.Jump && status)
+            return;
+
+        else if (_currentStatus != EStatus.Buldozer || (_currentStatus == EStatus.Jump && !status)) 
             _cinemachineController.ShakeCamera(0);
-        //true ise kamera shake baslat
-        //false ise bitir
     }
 }
