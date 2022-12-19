@@ -1,9 +1,9 @@
 public class Usable_Health : Usables
 {
-    public override void CollectableCollected()
+    public override void PlayerCollided()
     {
-        base.CollectableCollected();
+        base.PlayerCollided();
 
-        //_player.Tank_Health
+        _player.Tank.TankHealth.IncreaseHealth();
     }
 }

@@ -421,7 +421,9 @@ MonoBehaviour:
   - {fileID: 1140915056}
   - {fileID: 1587229520}
   _spinCoef: 3
-  _speed: 40
+  _startSpeed: 40
+  _maxSpeed: 120
+  _speedUpCount: 4
   _laneChangeDuration: 0.5
 --- !u!54 &156697247
 Rigidbody:
@@ -740,6 +742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65d1644034bb95b43a6aff95c16ccc3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _tank: {fileID: 0}
 --- !u!114 &384066606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1394,7 +1397,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.2588191, y: -0, z: -0, w: 0.9659258}
-  m_LocalPosition: {x: 0, y: 7, z: -5}
+  m_LocalPosition: {x: 0, y: 2, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 786263532}

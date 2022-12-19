@@ -11,6 +11,10 @@ public class Player : MonoBehaviour
     }
     #endregion
 
+    [Header("Tank")]
+    [SerializeField] private Tank _tank = null;
+    public Tank Tank => _tank;
+
     [Header("Controllers")]
     [SerializeField] private PowerUpController _powerUpController = null;
     public PowerUpController PowerUpController => _powerUpController;

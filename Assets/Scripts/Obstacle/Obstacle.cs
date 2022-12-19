@@ -1,12 +1,11 @@
 using UnityEngine;
 
-public class Obstacle : MonoBehaviour
+public class Obstacle : Collectable
 {
     [Header("Point Manager")]
     [SerializeField] private PointManager _pointManager = null;
 
     [Header("Obstacle Settings")]
-    [SerializeField] private int _pointForDestroy = 10;
     [SerializeField] private float _blowUpPoint = 100f;
 
     private void Start()
@@ -28,11 +27,13 @@ public class Obstacle : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void BlowUp()
+    public override void PlayerCollided()
     {
-        GetComponentInChildren<MeshRenderer>().enabled = false;
-        GetComponentInChildren<Collider>().enabled = false;
+        base.PlayerCollided();
+    }
 
+    public override void CollectedVisuals()
+    {
         _pointManager.PointGained(_blowUpPoint);
 
         //Start blow up animation

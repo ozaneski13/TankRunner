@@ -1,8 +1,8 @@
 public class PowerUp_Buldozer : PowerUps
 {
-    public override void CollectableCollected()
+    public override void PlayerCollided()
     {
-        base.CollectableCollected();
+        base.PlayerCollided();
 
         _player.PowerUpController.StartPowerUp_Buldoze(_powerUpDuration);
     }

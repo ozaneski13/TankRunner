@@ -1,7 +1,7 @@
 public class Usable_Coin : Usables
 {
-    public override void CollectableCollected()
+    public override void PlayerCollided()
     {
-        base.CollectableCollected();
+        base.PlayerCollided();
     }
 }

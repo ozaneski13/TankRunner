@@ -1,11 +1,10 @@
 ﻿TODO
 
-Jump sırasında buldoze etkisi
-çarpınca can azalt/yavaşlat/kaybettir
+buldoze kamera shake
+can 0ken çarpınca kaybettir
 Car spawning system + randomness -> spawn pointleri random aktive et
 
 Save system -> Collected coin / bought tanks / high score
-Super powers mechanics (Jump-Fire-Buldozer-Speed up etc.) -> Zıplayınca altta kalanları ez / Belli bir uzaklığa kadar ateş et yoldakiler yok olsun sınırlı mermi sayısı/ Belli süre boyunca ez geç / Hızlan?
 Sounds in Mechanics
 
 UI (main manu - pause menu - market?)

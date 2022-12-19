@@ -1,6 +1,6 @@
-using UnityEngine;
-
 public interface ICollectable
 {
-    void CollectableCollected();
+    void PlayerCollided();
+
+    void CollectedVisuals();
 }

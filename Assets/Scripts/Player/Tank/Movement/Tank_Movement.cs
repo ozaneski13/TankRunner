@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using System.Collections;
 
 public class Tank_Movement : MonoBehaviour
 {
@@ -14,8 +15,9 @@ public class Tank_Movement : MonoBehaviour
     [Header("Speed Settings")]
     [SerializeField] private float _startSpeed = 40f;
     [SerializeField] private float _maxSpeed = 120f;
-    [SerializeField] private int _speedUpCount = 4;
+    [SerializeField] private float _speedUpCooldown = 5f;
     [SerializeField] private float _laneChangeDuration = 0.5f;
+    [SerializeField] private int _speedUpCount = 4;
 
     private Rigidbody _rb = null;
 
@@ -39,6 +41,8 @@ public class Tank_Movement : MonoBehaviour
         _currentSpeed = _startSpeed;
 
         GetLanes();
+
+        StartCoroutine(SpeedRoutine());
     }
 
     private void Update()
@@ -53,11 +57,28 @@ public class Tank_Movement : MonoBehaviour
         MoveForward();
     }
 
-    private void MoveForward()
+    private void GetLanes()
     {
-        Vector3 velocity = (transform.forward) * _currentSpeed * Time.fixedDeltaTime;
-        velocity.y = _rb.velocity.y;
-        _rb.velocity = velocity;
+        _lanesXCoords = _laneController.LanesXCoord;
+
+        foreach (int lanePosition in _lanesXCoords)
+            if (transform.position.x == lanePosition)
+                _currentLaneIndex = _lanesXCoords.FindIndex(a => a == lanePosition);
+    }
+
+    private IEnumerator SpeedRoutine()
+    {
+        while (true)
+        {
+            if (_currentSpeed != _maxSpeed)
+            {
+                yield return new WaitForSeconds(_speedUpCooldown);
+
+                _currentSpeed += (_maxSpeed - _startSpeed) / _speedUpCount;
+            }
+
+            else yield return null;
+        }
     }
 
     private void CheckSwipe()
@@ -115,15 +136,6 @@ public class Tank_Movement : MonoBehaviour
         }
     }
 
-    private void GetLanes()
-    {
-        _lanesXCoords = _laneController.LanesXCoord;
-
-        foreach (int lanePosition in _lanesXCoords)
-            if (transform.position.x == lanePosition)
-                _currentLaneIndex = _lanesXCoords.FindIndex(a => a == lanePosition);
-    }
-
     private void Reset()
     {
         _startTouch = _swipeDelta = Vector2.zero;
@@ -134,14 +146,21 @@ public class Tank_Movement : MonoBehaviour
     {
         float _spinRotation = -_startSpeed * _spinCoef;
 
-        foreach(Transform transform in _wheels)
+        foreach (Transform transform in _wheels)
         {
             transform.Rotate(_spinRotation * Time.deltaTime, 0, 0);
         }
     }
 
-    public void ChangeSpeed()
+    private void MoveForward()
     {
-        _currentSpeed += (_maxSpeed - _startSpeed) / _speedUpCount;
+        Vector3 velocity = (transform.forward) * _currentSpeed * Time.fixedDeltaTime;
+        velocity.y = _rb.velocity.y;
+        _rb.velocity = velocity;
+    }
+
+    public void Crashed()
+    {
+        _currentSpeed = _startSpeed;
     }
 }

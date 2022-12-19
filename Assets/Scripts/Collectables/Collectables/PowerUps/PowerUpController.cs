@@ -3,28 +3,41 @@ using UnityEngine;
 
 public class PowerUpController : MonoBehaviour
 {
-    [Header("Tank")]
-    [SerializeField] private Tank _tank = null;
+    private Player _player = null;
+
+    private Tank _tank = null;
 
     private IEnumerator _powerUpRoutine = null;
 
     private int _powerUpUseCount = 0;
-    private bool _canUsePowerUp = false;
+    private bool _canUsePowerUp = true;
 
-    private IEnumerator PowerUpRoutine(float duration)
+    private void Start()
     {
-        _canUsePowerUp = true;
+        _player = Player.Instance;
+
+        _tank = _player.Tank;
+    }
+
+    private IEnumerator PowerUpRoutine(float duration, EStatus newStatus)
+    {
+        _tank.SetStatus(newStatus);
+        _canUsePowerUp = false;
 
         yield return new WaitForSeconds(duration);
 
-        _canUsePowerUp = false;
+        _canUsePowerUp = true;
+        _tank.SetStatus(EStatus.Normal);
+
+        if (newStatus == EStatus.Buldozer)
+            _tank.BuldozeStatus(false);
     }
 
     public void StartPowerUp_Fire(int fireCount, float powerUpDuration)
     {
         _powerUpUseCount = fireCount;
 
-        _powerUpRoutine = PowerUpRoutine(powerUpDuration);
+        _powerUpRoutine = PowerUpRoutine(powerUpDuration, EStatus.Fire);
 
         StartCoroutine(_powerUpRoutine);
     }
@@ -46,7 +59,7 @@ public class PowerUpController : MonoBehaviour
     {
         _powerUpUseCount = jumpCount;
 
-        _powerUpRoutine = PowerUpRoutine(powerUpDuration);
+        _powerUpRoutine = PowerUpRoutine(powerUpDuration, EStatus.Jump);
 
         StartCoroutine(_powerUpRoutine);
     }
@@ -66,7 +79,7 @@ public class PowerUpController : MonoBehaviour
 
     public void StartPowerUp_Buldoze(float powerUpDuration)
     {
-        _powerUpRoutine = PowerUpRoutine(powerUpDuration);
+        _powerUpRoutine = PowerUpRoutine(powerUpDuration, EStatus.Buldozer);
 
         StartCoroutine(_powerUpRoutine);
     }
@@ -75,7 +88,7 @@ public class PowerUpController : MonoBehaviour
     {
         if (!_canUsePowerUp)
             return;
-        
-        //Buldoze
+
+        _tank.BuldozeStatus(true);
     }
 }

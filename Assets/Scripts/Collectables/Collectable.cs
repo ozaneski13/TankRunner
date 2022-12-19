@@ -9,8 +9,8 @@ public abstract class Collectable : MonoBehaviour, ICollectable
 
     private void Awake()
     {
-        _meshRenderer = GetComponent<MeshRenderer>();
-        _collider = GetComponent<Collider>();
+        _meshRenderer = GetComponentInChildren<MeshRenderer>();
+        _collider = GetComponentInChildren<Collider>();
     }
 
     private void Start()
@@ -23,12 +23,19 @@ public abstract class Collectable : MonoBehaviour, ICollectable
         if (other.gameObject.tag != "Tank")
             return;
 
-        CollectableCollected();
+        PlayerCollided();
     }
 
-    public virtual void CollectableCollected()
+    public virtual void PlayerCollided()
     {
         _meshRenderer.enabled = false;
         _collider.enabled = false;
+
+        CollectedVisuals();
+    }
+
+    public virtual void CollectedVisuals()
+    {
+        //Start collected animation
     }
 }
