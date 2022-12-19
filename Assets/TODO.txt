@@ -1,6 +1,5 @@
 ﻿TODO
 
-buldoze kamera shake
 can 0ken çarpınca kaybettir
 Car spawning system + randomness -> spawn pointleri random aktive et
 

@@ -19,6 +19,10 @@ public class Tank : MonoBehaviour
     [Header("Tank Settings")]
     [SerializeField] private float _immuneDuration = 3f;
 
+    [Header("Shake Settings")]
+    [SerializeField] private CinemachineController _cinemachineController = null;
+    [SerializeField] private float _intensity = 0.3f;
+
     private EStatus _currentStatus = EStatus.Normal;
 
     private float _routineTimer = 0f;
@@ -69,7 +73,10 @@ public class Tank : MonoBehaviour
     {
         _isImmune = status;
 
-        //if status buldoze
+        if (_currentStatus == EStatus.Buldozer)
+            _cinemachineController.ShakeCamera(_intensity);
+        else
+            _cinemachineController.ShakeCamera(0);
         //true ise kamera shake baslat
         //false ise bitir
     }
