@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 43b100c4906679c4887246d6e5346431, type: 2}
     - target: {fileID: 6166707586099558856, guid: d2db26cdc3a2c174c89fda24d9760589, type: 3}
       propertyPath: m_Name
-      value: HighwaySign_2
+      value: HighwaySign_2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6166707586099558857, guid: d2db26cdc3a2c174c89fda24d9760589, type: 3}
       propertyPath: m_RootOrder
