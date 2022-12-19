@@ -1,6 +1,5 @@
 ﻿TODO
 
-yeni prefablere ve obstaclelara collider
 camera açısı
 Jump sırasında buldoze etkisi
 çarpınca can azalt/yavaşlat/kaybettir

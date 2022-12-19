@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5546106185215708284}
   - component: {fileID: 3449346378040564789}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Street_Lamb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
