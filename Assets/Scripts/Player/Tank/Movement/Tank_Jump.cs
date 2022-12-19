@@ -4,6 +4,8 @@ public class Tank_Jump : MonoBehaviour
 {
     [Header("Jump Settings")]
     [SerializeField] private float _jumpForce = 200f;
+    [SerializeField] private float _jumpShakeIntensity = 0.5f;
+    [SerializeField] private float _jumpShakeDuration = 0.2f;
 
     private Player _player = null;
 
@@ -25,6 +27,8 @@ public class Tank_Jump : MonoBehaviour
     {
         if (!_isGrounded)
             return;
+
+        _player.Tank.CinemachineController.ShakeCamera(_jumpShakeIntensity, _jumpShakeDuration);
 
         _rb.AddForce(transform.up * _jumpForce);
     }

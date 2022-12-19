@@ -21,6 +21,8 @@ public class Tank : MonoBehaviour
 
     [Header("Shake Settings")]
     [SerializeField] private CinemachineController _cinemachineController = null;
+    public CinemachineController CinemachineController => _cinemachineController;
+
     [SerializeField] private float _intensity = 0.3f;
 
     private EStatus _currentStatus = EStatus.Normal;
