@@ -1,9 +1,7 @@
 ﻿TODO
 
-camera açısı
 Jump sırasında buldoze etkisi
 çarpınca can azalt/yavaşlat/kaybettir
-Point system (Collectables + distance) + zamanla hızlan distance
 Car spawning system + randomness -> spawn pointleri random aktive et
 
 Save system -> Collected coin / bought tanks / high score

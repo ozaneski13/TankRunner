@@ -2,8 +2,17 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
+    [Header("Point Manager")]
+    [SerializeField] private PointManager _pointManager = null;
+
     [Header("Obstacle Settings")]
     [SerializeField] private int _pointForDestroy = 10;
+    [SerializeField] private float _blowUpPoint = 100f;
+
+    private void Start()
+    {
+        _pointManager = PointManager.Instance;
+    }
 
     private void OnEnable()
     {
@@ -24,7 +33,8 @@ public class Obstacle : MonoBehaviour
         GetComponentInChildren<MeshRenderer>().enabled = false;
         GetComponentInChildren<Collider>().enabled = false;
 
+        _pointManager.PointGained(_blowUpPoint);
+
         //Start blow up animation
-        //Increase points
     }
 }
