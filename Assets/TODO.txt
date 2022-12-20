@@ -1,5 +1,6 @@
 ﻿TODO
 
+check immune obstacle hit for flicker effect
 can 0ken çarpınca kaybettir
 Car spawning system + randomness -> spawn pointleri random aktive et
 road -> peşpeşe istenilen prefabi spawn etme
