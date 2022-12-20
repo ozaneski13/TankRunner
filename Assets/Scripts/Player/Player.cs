@@ -47,6 +47,11 @@ public class Player : MonoBehaviour
     private int _collectedGoldCount = 0;
     public int CollectedGoldCount => _collectedGoldCount;
 
+    private void OnDestroy()
+    {
+        SaveGame();
+    }
+
     private void LoadSave()
     {
         PlayerData data = SaveManager.LoadPlayer();
@@ -55,5 +60,10 @@ public class Player : MonoBehaviour
         _currentTank = data._currentTank;
         _boughtTanks = data._boughtTanks;
         _collectedGoldCount = data._collectedGoldCount;
+    }
+
+    public void SaveGame()
+    {
+        SaveManager.SavePlayer(this);
     }
 }

@@ -22,6 +22,7 @@ public class PointManager : MonoBehaviour
     private Vector3 _lastPosition = Vector3.zero;
 
     private float _totalPointGain = 0f;
+    private int _totalGoldCount = 0;
 
     private void Start()
     {
@@ -43,5 +44,9 @@ public class PointManager : MonoBehaviour
         }
     }
 
-    public void PointGained(float pointGain) => _totalPointGain += pointGain;
+    public void PointGained(float pointGain)
+    {
+        _totalGoldCount++;
+        _totalPointGain += pointGain; 
+    }
 }
