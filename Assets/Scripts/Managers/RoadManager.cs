@@ -30,6 +30,9 @@ public class RoadManager : MonoBehaviour
     [Header("Penultimate Point")]
     [SerializeField] private Transform _penultimateRoad = null;
 
+    [Header("Main Collider")]
+    [SerializeField] private BoxCollider _mainCollider = null;
+
     private List<Transform> _activatedRoadEnvironments = new List<Transform>();
 
     private Transform _roadToDelete = null;
@@ -89,6 +92,9 @@ public class RoadManager : MonoBehaviour
                 _activatedRoadEnvironments.Add(nextRoad.transform);
 
                 _currentPosition = newPosition;
+
+                _mainCollider.size += new Vector3(0, 0, (nextRoad.transform.position.z-_lastRoad.transform.position.z) * 2);
+
                 _lastRoad = nextRoad.transform;
 
                 break;

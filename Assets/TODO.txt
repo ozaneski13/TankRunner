@@ -1,7 +1,5 @@
 ﻿TODO
 
-prefablerdeki collider yerine sabit collider size değiştir sabit colldier size büyütme
-flick effect to tank
 can 0ken çarpınca kaybettir
 Car spawning system + randomness -> spawn pointleri random aktive et
 
@@ -13,6 +11,6 @@ Sounds UI Main menu/ingame Music
 Fog effect
 Market
 
-Cinemachine?
+cinemachine start camera effects
 Day-Night?
 Add light to street lambs at night time?

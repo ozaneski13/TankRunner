@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Tank : MonoBehaviour
@@ -18,6 +19,7 @@ public class Tank : MonoBehaviour
 
     [Header("Tank Settings")]
     [SerializeField] private float _immuneDuration = 3f;
+    [SerializeField] private float _flickDuration = 0.2f;
 
     [Header("Shake Settings")]
     [SerializeField] private CinemachineController _cinemachineController = null;
@@ -25,12 +27,19 @@ public class Tank : MonoBehaviour
 
     [SerializeField] private float _intensity = 0.3f;
 
+    private List<Material> materials = new List<Material>();
+
     private EStatus _currentStatus = EStatus.Normal;
 
     private float _routineTimer = 0f;
 
     private bool _isTimerStarted = false;
     private bool _isImmune = false;
+
+    private void Awake()
+    {
+        GetMaterials();
+    }
 
     private void Update()
     {
@@ -53,6 +62,15 @@ public class Tank : MonoBehaviour
         }
     }
 
+    private void GetMaterials()
+    {
+        MeshRenderer[] meshRenderers = GetComponentsInChildren<MeshRenderer>();
+
+        foreach (MeshRenderer meshRenderer in meshRenderers)
+            foreach (Material material in meshRenderer.materials)
+                materials.Add(material);
+    }
+
     public void SetStatus(EStatus newStatus) => _currentStatus = newStatus;
     public EStatus GetStatus() => _currentStatus;
 
@@ -63,8 +81,15 @@ public class Tank : MonoBehaviour
 
         while (_routineTimer < _immuneDuration)
         {
-            //Flick materials
-            yield return new WaitForSeconds(_immuneDuration / 6);
+            foreach (Material material in materials)
+                material.color = new Color(material.color.r, material.color.g, material.color.b, 0);
+
+            yield return new WaitForSeconds(_flickDuration);
+
+            foreach (Material material in materials)
+                material.color = new Color(material.color.r, material.color.g, material.color.b, 255);
+
+            yield return new WaitForSeconds(0.5f);
         }
 
         _isImmune = false;

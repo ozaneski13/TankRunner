@@ -368,6 +368,7 @@ MonoBehaviour:
   _poolSize: 20
   _lastPreCreatedRoad: {fileID: 830841409}
   _penultimateRoad: {fileID: 1950313964}
+  _mainCollider: {fileID: 527922082}
 --- !u!1 &156697244
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,6 +521,7 @@ MonoBehaviour:
   _tankHealth: {fileID: 156697250}
   _tankMovement: {fileID: 156697246}
   _immuneDuration: 3
+  _flickDuration: 0.2
   _cinemachineController: {fileID: 1930236845}
   _intensity: 0.3
 --- !u!4 &156812169 stripped
@@ -713,6 +715,10 @@ PrefabInstance:
     - target: {fileID: 1649451093339624065, guid: 59b57ba828bd069428a8a8fa22fc5b22, type: 3}
       propertyPath: m_Name
       value: Gas_Tank_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1649451093339624065, guid: 59b57ba828bd069428a8a8fa22fc5b22, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1649451093339624065, guid: 59b57ba828bd069428a8a8fa22fc5b22, type: 3}
       propertyPath: m_TagString
@@ -1627,7 +1633,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &982603224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1637,11 +1643,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 982603223}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27812da736db3c844b463bbdc06de2d2, type: 3}
+  m_Script: {fileID: 11500000, guid: d1550404743ada34599374b0fca9002b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _powerUpDuration: 5
-  _fireCount: 3
 --- !u!65 &982603225
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1674,7 +1679,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0a408f968484be545b59ba43b3c32f1e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

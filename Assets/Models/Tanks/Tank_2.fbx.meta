@@ -3,7 +3,42 @@ guid: 6812e7bab15eeeb4ea1b4b5997246939
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tank_B_Body_Color
+    second: {fileID: 2100000, guid: 9e686c64660fab9459e154e02a5eb3e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tank_B_Glass
+    second: {fileID: 2100000, guid: 97857b8c62e8daf43ac58d8d4e6eb8a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tank_B_Light
+    second: {fileID: 2100000, guid: 2e9f7a209d31915448d428bad93fc8c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tank_B_Metal
+    second: {fileID: 2100000, guid: 77f447cb4af78fe48a246e134cfb6ae5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tank_B_Rim
+    second: {fileID: 2100000, guid: 38e3a54610ab13b42ac858592a923b9a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tank_B_Second_Body_Color
+    second: {fileID: 2100000, guid: b0e5032bef5957a4c9b74860f96157a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tank_B_Tyre
+    second: {fileID: 2100000, guid: f615deb077ddb244c96cc218ed81fc10, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
