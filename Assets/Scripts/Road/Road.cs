@@ -23,4 +23,9 @@ public class Road : MonoBehaviour
             _roadManager.DeletePassedPhases(transform);
         }
     }
+
+    private void OnDisable()
+    {
+        _isRoadPassed = false;
+    }
 }

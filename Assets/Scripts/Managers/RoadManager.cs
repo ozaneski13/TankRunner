@@ -30,9 +30,6 @@ public class RoadManager : MonoBehaviour
     [Header("Penultimate Point")]
     [SerializeField] private Transform _penultimateRoad = null;
 
-    [Header("Main Collider")]
-    [SerializeField] private BoxCollider _mainCollider = null;
-
     private List<Transform> _activatedRoadEnvironments = new List<Transform>();
 
     private Transform _roadToDelete = null;
@@ -83,17 +80,15 @@ public class RoadManager : MonoBehaviour
         {
             if (_lastRoad.GetComponent<Road>().RoadEnvironmentType != roadEnvironment.GetComponent<Road>().RoadEnvironmentType)
             {
-                GameObject nextRoad = _roadEnvironmentPool[0].gameObject;
+                GameObject nextRoad = roadEnvironment.gameObject;
                 nextRoad.transform.parent = _roadEnvironmentParent;
-                nextRoad.transform.position = newPosition;
+                nextRoad.transform.localPosition = newPosition;
                 nextRoad.SetActive(true);
 
-                _roadEnvironmentPool.Remove(_roadEnvironmentPool[0]);
+                _roadEnvironmentPool.Remove(roadEnvironment);
                 _activatedRoadEnvironments.Add(nextRoad.transform);
 
                 _currentPosition = newPosition;
-
-                _mainCollider.size += new Vector3(0, 0, (nextRoad.transform.position.z-_lastRoad.transform.position.z) * 2);
 
                 _lastRoad = nextRoad.transform;
 
