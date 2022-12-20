@@ -2,6 +2,7 @@
 
 can 0ken çarpınca kaybettir
 Car spawning system + randomness -> spawn pointleri random aktive et
+road -> peşpeşe istenilen prefabi spawn etme
 
 Save system -> Collected coin / bought tanks / high score
 Sounds in Mechanics
