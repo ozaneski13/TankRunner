@@ -366,6 +366,7 @@ MonoBehaviour:
   _roadEnvironmentParent: {fileID: 1856620375}
   _roadEnvironmentPoolParent: {fileID: 1977571474}
   _poolSize: 20
+  _roadTreadmill: {fileID: 1680661053}
   _lastPreCreatedRoad: {fileID: 830841409}
   _penultimateRoad: {fileID: 1950313964}
 --- !u!1 &156697244
@@ -413,21 +414,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156697244}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a97485b97f7beb640a8139267ec3f88b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _laneController: {fileID: 384066604}
+  _laneChangeDuration: 0.5
   _wheels:
   - {fileID: 1140915056}
   - {fileID: 1587229520}
-  _spinCoef: 3
-  _startSpeed: 160
-  _maxSpeed: 200
-  _speedUpCooldown: 5
-  _laneChangeDuration: 0.5
-  _speedUpCount: 4
+  _spinCoef: 50
 --- !u!54 &156697247
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -505,7 +502,6 @@ MonoBehaviour:
   _tankJump: {fileID: 156697249}
   _tankFire: {fileID: 156697251}
   _tankHealth: {fileID: 156697250}
-  _tankMovement: {fileID: 156697246}
   _immuneDuration: 3
   _flickDuration: 0.2
   _cinemachineController: {fileID: 1930236845}
@@ -2193,7 +2189,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10e540ceb56e6c44997c8a836f7c04c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _treadmillSpeed: 10
+  _startSpeed: 3
+  _maxSpeed: 7
+  _speedUpCooldown: 5
+  _speedUpCount: 4
 --- !u!1001 &1724842510
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -24,6 +24,10 @@ public class RoadManager : MonoBehaviour
 
     private List<Transform> _roadEnvironmentPool = new List<Transform>();
 
+    [Header("Road Treadmill")]
+    [SerializeField] private Road_Treadmill _roadTreadmill = null;
+    public Road_Treadmill RoadTreadmill => _roadTreadmill;
+
     [Header("Phase Starting Point")]
     [SerializeField] private Transform _lastPreCreatedRoad = null;
 

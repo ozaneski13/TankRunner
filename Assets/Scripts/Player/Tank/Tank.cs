@@ -14,9 +14,6 @@ public class Tank : MonoBehaviour
     [SerializeField] private Tank_Health _tankHealth = null;
     public Tank_Health TankHealth => _tankHealth;
 
-    [SerializeField] private Tank_Movement _tankMovement = null;
-    public Tank_Movement TankMovement => _tankMovement;
-
     [Header("Tank Settings")]
     [SerializeField] private float _immuneDuration = 3f;
     [SerializeField] private float _flickDuration = 0.2f;
@@ -24,7 +21,6 @@ public class Tank : MonoBehaviour
     [Header("Shake Settings")]
     [SerializeField] private CinemachineController _cinemachineController = null;
     public CinemachineController CinemachineController => _cinemachineController;
-
     [SerializeField] private float _intensity = 0.3f;
 
     private List<Material> materials = new List<Material>();
@@ -55,8 +51,8 @@ public class Tank : MonoBehaviour
         if (!_isImmune)
         {
             _tankHealth.DecreaseHealth();
-            
-            _tankMovement.Crashed();
+
+            RoadManager.Instance.RoadTreadmill.TankCrashed();
             
             StartCoroutine(ImmuneRoutine());
         }

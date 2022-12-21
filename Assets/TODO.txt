@@ -1,9 +1,12 @@
 ﻿TODO
 
+magnet powerup
+zıplama anim? dust effect on buldoze/fire anim/obstacle blowup anim/collectable collected anim
+road -> peşpeşe istenilen prefabi spawn etme
 check immune obstacle hit for flicker effect
 can 0ken çarpınca kaybettir
 Car spawning system + randomness -> spawn pointleri random aktive et
-road -> peşpeşe istenilen prefabi spawn etme
+yeni scene düzeni
 
 Sounds in Mechanics
 
