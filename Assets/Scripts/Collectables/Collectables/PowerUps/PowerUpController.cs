@@ -30,6 +30,8 @@ public class PowerUpController : MonoBehaviour
 
         if(newStatus == EStatus.Buldozer)
             _tank.BuldozeStatus(true);
+        else if (newStatus == EStatus.Magnet)
+            _tank.TankMagnet.ToggleMagnet(true);
 
         yield return new WaitForSeconds(duration);
 
@@ -38,6 +40,9 @@ public class PowerUpController : MonoBehaviour
 
         if (newStatus == EStatus.Buldozer)
             _tank.BuldozeStatus(false);
+
+        else if (newStatus == EStatus.Magnet)
+            _tank.TankMagnet.ToggleMagnet(false);
     }
 
     public void StartPowerUp_Fire(int fireCount, float powerUpDuration)
@@ -119,6 +124,16 @@ public class PowerUpController : MonoBehaviour
             return;
 
         _powerUpRoutine = PowerUpRoutine(powerUpDuration, EStatus.Buldozer);
+
+        StartCoroutine(_powerUpRoutine);
+    }
+
+    public void StartPowerUp_Magnet(float powerUpDuration)
+    {
+        if (!_canUsePowerUp)
+            return;
+
+        _powerUpRoutine = PowerUpRoutine(powerUpDuration, EStatus.Magnet);
 
         StartCoroutine(_powerUpRoutine);
     }

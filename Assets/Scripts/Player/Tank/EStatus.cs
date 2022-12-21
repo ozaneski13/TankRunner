@@ -4,5 +4,6 @@ public enum EStatus
     Jump,
     Fire,
     Buldozer,
+    Magnet,
     Default
 }

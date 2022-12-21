@@ -14,6 +14,9 @@ public class Tank : MonoBehaviour
     [SerializeField] private Tank_Health _tankHealth = null;
     public Tank_Health TankHealth => _tankHealth;
 
+    [SerializeField] private Tank_Magnet _tankMagnet = null;
+    public Tank_Magnet TankMagnet => _tankMagnet;
+
     [Header("Tank Settings")]
     [SerializeField] private float _immuneDuration = 3f;
     [SerializeField] private float _flickDuration = 0.2f;

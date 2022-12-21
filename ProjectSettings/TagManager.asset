@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Tank
+  - Obstacle
+  - Magnet
   layers:
   - Default
   - TransparentFX
