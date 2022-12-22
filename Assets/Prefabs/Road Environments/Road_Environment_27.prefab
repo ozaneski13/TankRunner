@@ -140,8 +140,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4573445465148559691}
-  - component: {fileID: 1779799767499250754}
-  - component: {fileID: 926015913813638366}
   m_Layer: 0
   m_Name: Road_Environment_27
   m_TagString: Untagged
@@ -164,32 +162,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1779799767499250754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4573445465148559688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0b8e75f80718cd4a908f5b547c85bd6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _roadEnvironmentType: 1
---- !u!65 &926015913813638366
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4573445465148559688}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5, y: 1, z: 0.1}
-  m_Center: {x: 0, y: 0.5, z: 2.5}
 --- !u!1 &4573445465614047471
 GameObject:
   m_ObjectHideFlags: 0

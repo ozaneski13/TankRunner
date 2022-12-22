@@ -78,12 +78,14 @@ public class RoadManager : MonoBehaviour
 
     private void CreateNextPhase()
     {
-        Vector3 newPosition = _currentPosition + new Vector3(0, 0, _environmentOffset);
-
         foreach (Transform roadEnvironment in _roadEnvironmentPool)
         {
             if (_lastRoad.GetComponent<Road>().RoadEnvironmentType != roadEnvironment.GetComponent<Road>().RoadEnvironmentType)
             {
+                int childCount = _lastRoad.childCount;
+
+                Vector3 newPosition = _currentPosition + new Vector3(0, 0, _environmentOffset * childCount);
+
                 GameObject nextRoad = roadEnvironment.gameObject;
                 nextRoad.transform.parent = _roadEnvironmentParent;
                 nextRoad.transform.localPosition = newPosition;

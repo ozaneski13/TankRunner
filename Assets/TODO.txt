@@ -1,14 +1,14 @@
 ﻿TODO
 
-zıplama anim? dust effect on buldoze/fire anim/obstacle blowup anim/collectable collected anim ya da clink sound
-road -> peşpeşe istenilen prefabi spawn etme
-can 0ken çarpınca kaybettir
+yeni tank modelleri tank update
 Car spawning system + randomness -> spawn pointleri random aktive et
-yeni scene düzeni
+zıplama anim? dust effect on buldoze/fire anim/obstacle blowup anim/collectable collected anim ya da clink sound
 tank hp bar
+yeni scene düzeni
 
 Sounds in Mechanics
 
+can 0ken çarpınca kaybettir
 UI (main manu - pause menu - market?)
 Sounds UI Main menu/ingame Music
 Fog effect
