@@ -1,10 +1,11 @@
 ﻿TODO
 
-zıplama anim? dust effect on buldoze/fire anim/obstacle blowup anim/collectable collected anim
+zıplama anim? dust effect on buldoze/fire anim/obstacle blowup anim/collectable collected anim ya da clink sound
 road -> peşpeşe istenilen prefabi spawn etme
 can 0ken çarpınca kaybettir
 Car spawning system + randomness -> spawn pointleri random aktive et
 yeni scene düzeni
+tank hp bar
 
 Sounds in Mechanics
 

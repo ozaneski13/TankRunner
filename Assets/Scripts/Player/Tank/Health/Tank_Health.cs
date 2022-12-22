@@ -3,7 +3,7 @@ using UnityEngine;
 public class Tank_Health : MonoBehaviour
 {
     [Header("Health Settings")]
-    [SerializeField] private int _startingHealth = 3;
+    [SerializeField] private int _startingHealth = 100;
 
     private int _currentHealth;
 
@@ -12,16 +12,19 @@ public class Tank_Health : MonoBehaviour
         _currentHealth = _startingHealth;
     }
 
-    public void IncreaseHealth()
+    public void IncreaseHealth(int heal)
     {
-        _currentHealth++;
+        if (_currentHealth + heal <= _startingHealth)
+            _currentHealth += heal;
+        else
+            _currentHealth = 100;
     }
 
-    public void DecreaseHealth()
+    public void DecreaseHealth(int damage)
     {
-        if (_currentHealth == 0)
+        if (_currentHealth - damage <= 0)
             ;//Game Over
 
-        _currentHealth--;
+        _currentHealth -= damage;
     }
 }

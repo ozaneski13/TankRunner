@@ -6,6 +6,8 @@ public class Obstacle : Collectable
     [SerializeField] private PointManager _pointManager = null;
 
     [Header("Obstacle Settings")]
+    [SerializeField] private int _damage = 1;
+    public int Damage => _damage;
     [SerializeField] private float _blowUpPoint = 100f;
 
     private void Start()

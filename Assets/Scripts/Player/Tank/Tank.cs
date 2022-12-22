@@ -53,7 +53,7 @@ public class Tank : MonoBehaviour
         
         if (!_isImmune)
         {
-            _tankHealth.DecreaseHealth();
+            _tankHealth.DecreaseHealth(other.gameObject.GetComponent<Obstacle>().Damage);
 
             RoadManager.Instance.RoadTreadmill.TankCrashed();
             
