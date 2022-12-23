@@ -7,16 +7,31 @@ public class MainMenuController : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        StartCoroutine(LoadNewScene("SampleScene"));
     }
 
     public void OpenMarket()
     {
-        SceneManager.LoadScene("MarketScene");
+        StartCoroutine(LoadNewScene("MarketScene"));
     }
 
     public void QuitGame()
     {
+        StartCoroutine(QuitWithDelay());
+        
+    }
+
+    IEnumerator LoadNewScene(string sceneName)
+    {
+        yield return new WaitForSeconds(1f);
+        if(sceneName == "SampleScene")
+            MusicManager.Instance.SetToGameMusic();
+        SceneManager.LoadScene(sceneName);
+    }
+
+    IEnumerator QuitWithDelay()
+    {
+        yield return new WaitForSeconds(1f);
         Application.Quit();
     }
 }

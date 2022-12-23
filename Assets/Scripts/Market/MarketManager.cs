@@ -51,7 +51,7 @@ public class MarketManager : MonoBehaviour
     void Update()
     {
         CheckSelectButtonStatus();
-        Debug.Log("SelectedTankIndex:" + SelectedTankIndex);    
+        //Debug.Log("SelectedTankIndex:" + SelectedTankIndex);    
     }
 
 
@@ -134,6 +134,12 @@ public class MarketManager : MonoBehaviour
 
     public void OnMainMenuClicked()
     {
+        StartCoroutine(LoadMainMenuWithDelay());
+    }
+
+    IEnumerator LoadMainMenuWithDelay()
+    {
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene("MainMenu");
     }
 
