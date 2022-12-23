@@ -27,7 +27,19 @@ public class Tank_Movement : MonoBehaviour
 
     private void Update()
     {
-        CheckSwipe();
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            if (_currentLaneIndex != 0)
+                _currentLaneIndex--;
+        }
+
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
+            if (_currentLaneIndex != _lanesXCoords.Count - 1)
+                _currentLaneIndex++;
+
+        transform.DOMoveX(_lanesXCoords[_currentLaneIndex], _laneChangeDuration, false);
+
+        //CheckSwipe();
 
         RotateWheels();
     }
