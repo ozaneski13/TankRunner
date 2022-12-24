@@ -15,8 +15,7 @@ public class PointManager : MonoBehaviour
     [Header("Point Settings")]
     [SerializeField] private float _pointGainPerUnit = 5f;
 
-    [Header("Tank")]
-    [SerializeField] private Transform _tank = null;
+    private Transform _tank = null;
 
     private Vector3 _startingPosition = Vector3.zero;
     private Vector3 _lastPosition = Vector3.zero;
@@ -26,6 +25,8 @@ public class PointManager : MonoBehaviour
 
     private void Start()
     {
+        _tank = Player.Instance.Tank.transform;
+
         _startingPosition = _tank.position;
         _lastPosition = _startingPosition;
 

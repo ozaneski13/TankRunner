@@ -34,6 +34,7 @@ public class Tank : MonoBehaviour
 
     private bool _isTimerStarted = false;
     private bool _isImmune = false;
+    public bool IsImmune => _isImmune;
 
     private void Awake()
     {

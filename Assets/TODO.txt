@@ -1,10 +1,10 @@
 ﻿TODO
 
-yeni tank modelleri tank update
 Car spawning system + randomness -> spawn pointleri random aktive et
 zıplama anim? dust effect on buldoze/fire anim/obstacle blowup anim/collectable collected anim ya da clink sound
 tank hp bar
 yeni scene düzeni
+fade between scenes
 
 Sounds in Mechanics
 

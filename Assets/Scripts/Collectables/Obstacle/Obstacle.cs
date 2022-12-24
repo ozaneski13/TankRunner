@@ -2,13 +2,12 @@ using UnityEngine;
 
 public class Obstacle : Collectable
 {
-    [Header("Point Manager")]
-    [SerializeField] private PointManager _pointManager = null;
-
     [Header("Obstacle Settings")]
     [SerializeField] private int _damage = 1;
     public int Damage => _damage;
     [SerializeField] private float _blowUpPoint = 100f;
+
+    private PointManager _pointManager = null;
 
     private void Start()
     {
@@ -37,8 +36,11 @@ public class Obstacle : Collectable
 
     public override void CollectedVisuals()
     {
-        _pointManager.PointGained(_blowUpPoint);
-
         //Start blow up animation
+
+        if (_player.Tank.IsImmune)
+            return;
+
+        _pointManager.PointGained(_blowUpPoint);
     }
 }
