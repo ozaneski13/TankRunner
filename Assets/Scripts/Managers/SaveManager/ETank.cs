@@ -4,5 +4,7 @@ public enum ETank
     Yellow,
     Orange,
     Blue,
+    Purple,
+    Green,
     Default
 }

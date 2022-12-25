@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
         if (Instance == null)
             Instance = this;
 
+        DontDestroyOnLoad(gameObject);
+
         if (SaveManager.LoadPlayer() == null)
         {
             Player player = new Player();
@@ -28,6 +30,9 @@ public class Player : MonoBehaviour
     [Header("Tank")]
     [SerializeField] private Tank _tank = null;
     public Tank Tank => _tank;
+
+    [SerializeField] private List<GameObject> _tankPrefabs = new List<GameObject>();
+    public List<GameObject> TankPrefabs => _tankPrefabs;
 
     [Header("Controllers")]
     [SerializeField] private PowerUpController _powerUpController = null;

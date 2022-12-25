@@ -9,8 +9,9 @@ public class Tank_Movement : MonoBehaviour
     [SerializeField] private float _laneChangeDuration = 0.5f;
 
     [Header("Rotate Settings")]
-    [SerializeField] private Transform[] _wheels = null;
-    [SerializeField] private float _spinCoef = 5f;    
+    [SerializeField] private float _spinCoef = 5f;
+
+    private List<Transform> _wheels = null;
 
     private Vector2 _startTouch;
     private Vector2 _swipeDelta;
@@ -19,6 +20,7 @@ public class Tank_Movement : MonoBehaviour
     private int _currentLaneIndex;
 
     private bool _isDragging = false;
+    private bool _isModelReady = false;
 
     private void Start()
     {
@@ -39,9 +41,10 @@ public class Tank_Movement : MonoBehaviour
 
         transform.DOMoveX(_lanesXCoords[_currentLaneIndex], _laneChangeDuration, false);
 
-        //CheckSwipe();
+        CheckSwipe();
 
-        RotateWheels();
+        if (_isModelReady)
+            RotateWheels();
     }
 
     private void GetLanes()
@@ -51,6 +54,13 @@ public class Tank_Movement : MonoBehaviour
         foreach (int lanePosition in _lanesXCoords)
             if (transform.position.x == lanePosition)
                 _currentLaneIndex = _lanesXCoords.FindIndex(a => a == lanePosition);
+    }
+
+    public void GetWheels(Tank_Model tankModel)
+    {
+        _wheels = tankModel.Wheels;
+
+        _isModelReady = true;
     }
 
     private void CheckSwipe()

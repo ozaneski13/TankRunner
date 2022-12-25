@@ -1,11 +1,10 @@
 ﻿TODO
 
-player setter for market
-player dontdestroyonload
-Car spawning system + randomness -> spawn pointleri random aktive et
-load model when tank selected
+load model when tank selected -> tank-getmodel
 zıplama anim? dust effect on buldoze/fire anim/obstacle blowup anim/collectable collected anim ya da clink sound
 yeni scene düzeni
+
+pause menuden main menuye geçişte araç aşağı düşüyor -> main menuye geçerken rigidbody freeze y tik oyuna geçerken tik kaldır
 
 scene geçişlerinde soluk ışığın güncellenmesi
 tank hp bar

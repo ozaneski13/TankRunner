@@ -17,10 +17,12 @@ public class Tank : MonoBehaviour
     [SerializeField] private Tank_Magnet _tankMagnet = null;
     public Tank_Magnet TankMagnet => _tankMagnet;
 
+    [SerializeField] private Tank_Movement _tankMovement = null;
+
     [Header("Tank Settings")]
     [SerializeField] private float _immuneDuration = 3f;
     [SerializeField] private float _flickDuration = 0.2f;
-
+    
     [Header("Shake Settings")]
     [SerializeField] private CinemachineController _cinemachineController = null;
     public CinemachineController CinemachineController => _cinemachineController;
@@ -69,6 +71,18 @@ public class Tank : MonoBehaviour
         foreach (MeshRenderer meshRenderer in meshRenderers)
             foreach (Material material in meshRenderer.materials)
                 materials.Add(material);
+    }
+
+    public void GetModel()
+    {
+        Tank_Model[] tankModels = GetComponentsInChildren<Tank_Model>();
+
+        foreach (Tank_Model tankModel in tankModels)
+            if (tankModel.gameObject.activeInHierarchy)
+            {
+                _tankMovement.GetWheels(tankModel);
+                break;
+            }
     }
 
     public void SetStatus(EStatus newStatus) => _currentStatus = newStatus;
