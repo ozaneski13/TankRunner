@@ -141,5 +141,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MenuMusic: {fileID: 8300000, guid: 5f968fc889968274e8932205a5d588d3, type: 3}
-  GameMusic: {fileID: 8300000, guid: 223da8bd4f3065d469a17d3c53b9a218, type: 3}
+  GameMusic: {fileID: 8300000, guid: 2e7fca4d48646b9438eab59a1a01a436, type: 3}
   MusicAudioSource: {fileID: 0}
