@@ -15,6 +15,6 @@ public class ClickSoundController : MonoBehaviour
     private IEnumerator PlaySound(AudioSource audioSource)
     {
         audioSource.Play();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.5f);
     }
 }
