@@ -2762,6 +2762,7 @@ MonoBehaviour:
   - {fileID: 94737208}
   - {fileID: 540344546}
   - {fileID: 446322974}
+  TanksParentGameObject: {fileID: 1034529042}
   initialLocation: {x: 0, y: 0.3, z: 2}
   SelectButton: {fileID: 1570158111}
   BuyButton: {fileID: 1847090685}
@@ -7451,6 +7452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tank: {fileID: 3120645421221095834}
+  _tankPrefabs: []
   _powerUpController: {fileID: 7227318400757674598}
 --- !u!1 &2827923991292086765
 GameObject:
@@ -7815,6 +7817,7 @@ MonoBehaviour:
   _tankFire: {fileID: 8145413077130077686}
   _tankHealth: {fileID: 3330302956033560917}
   _tankMagnet: {fileID: 2588691244993982650}
+  _tankMovement: {fileID: 0}
   _immuneDuration: 3
   _flickDuration: 0.2
   _cinemachineController: {fileID: 2187022426198963927}
@@ -19819,9 +19822,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _laneController: {fileID: 4348198196780640352}
   _laneChangeDuration: 0.5
-  _wheels:
-  - {fileID: 0}
-  - {fileID: 0}
   _spinCoef: 50
 --- !u!1 &8613657642160218193
 GameObject:

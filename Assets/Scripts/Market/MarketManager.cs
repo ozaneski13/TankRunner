@@ -13,6 +13,8 @@ public class MarketManager : MonoBehaviour
     [SerializeField]
     public List<GameObject> Tanks;
     [SerializeField]
+    public GameObject TanksParentGameObject;
+    [SerializeField]
     public Vector3 initialLocation = new Vector3(0, 0, 2f);
     [SerializeField]
     private Button SelectButton;
@@ -25,7 +27,7 @@ public class MarketManager : MonoBehaviour
     [SerializeField]
     public List<int> TanksPerPrice;
     static bool isMoveActive = false;
-    float ChangeSpeed  = 10f;
+    float ChangeSpeed = 10f;
     int RotationTankIndex = 0;
     //static int SelectedTankIndex = 0;
 
@@ -79,10 +81,11 @@ public class MarketManager : MonoBehaviour
         {
             if(RotationTankIndex != 0)
             {
-                for (int i = 0; i < Tanks.Count; i++)
+                StartCoroutine(MoveObjects(TanksParentGameObject.gameObject, 1));
+                /*for (int i = 0; i < Tanks.Count; i++)
                 {
                     StartCoroutine(MoveObjects(Tanks[i], 1));
-                }
+                }*/
                 RotationTankIndex--;
             }
         }
@@ -94,10 +97,11 @@ public class MarketManager : MonoBehaviour
         {
             if (RotationTankIndex != Tanks.Count-1)
             {
-                for (int i = 0; i < Tanks.Count; i++)
+                StartCoroutine(MoveObjects(TanksParentGameObject.gameObject, -1));
+                /*for (int i = 0; i < Tanks.Count; i++)
                 {
                     StartCoroutine(MoveObjects(Tanks[i], -1));
-                }
+                }*/
                 RotationTankIndex++;
             }
         }
@@ -116,9 +120,10 @@ public class MarketManager : MonoBehaviour
             tankObject.transform.position = Vector3.Lerp(tankObject.transform.position, nextLocation, ChangeSpeed * Time.deltaTime);
 
             // If the object has reached the end position, stop the coroutine
-            if (tankObject.transform.position == nextLocation)
+            if (tankObject.transform.position.z < nextLocation.z + 0.02f && tankObject.transform.position.z > nextLocation.z - 0.02f)
             {
-                isMoveActive= false;
+                tankObject.transform.position = nextLocation;
+                isMoveActive = false;
                 yield break;
             }
 
