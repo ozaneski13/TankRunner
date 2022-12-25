@@ -21,6 +21,8 @@ public class MarketManager : MonoBehaviour
     [SerializeField]
     private TMPro.TextMeshProUGUI GoldCountText;
     [SerializeField]
+    private Image LockImage;
+    [SerializeField]
     public List<int> TanksPerPrice;
     static bool isMoveActive = false;
     float ChangeSpeed  = 10f;
@@ -46,7 +48,6 @@ public class MarketManager : MonoBehaviour
 
         if(Player.Instance!= null)
         {
-            Player.Instance.CollectedGoldCount = 100;
             GoldCountText.text = Player.Instance.CollectedGoldCount.ToString();
         }
         else
@@ -151,6 +152,7 @@ public class MarketManager : MonoBehaviour
             if (BuyButton.IsActive())
             {
                 BuyButton.gameObject.SetActive(false);
+                LockImage.gameObject.SetActive(false);
             }
         }
         else
@@ -158,6 +160,7 @@ public class MarketManager : MonoBehaviour
             if (!BuyButton.IsActive())
             {
                 BuyButton.gameObject.SetActive(true);
+                LockImage.gameObject.SetActive(true);
             }
         }
     }
