@@ -16,10 +16,16 @@ public class MarketManager : MonoBehaviour
     public Vector3 initialLocation = new Vector3(0, 0, 2f);
     [SerializeField]
     private Button SelectButton;
+    [SerializeField]
+    private Button BuyButton;
+    [SerializeField]
+    private TMPro.TextMeshProUGUI GoldCountText;
+    [SerializeField]
+    public List<int> TanksPerPrice;
     static bool isMoveActive = false;
     float ChangeSpeed  = 10f;
     int RotationTankIndex = 0;
-    static int SelectedTankIndex = 0;
+    //static int SelectedTankIndex = 0;
 
     void Awake()
     {
@@ -37,6 +43,24 @@ public class MarketManager : MonoBehaviour
     void Start()
     {
         SortTanks();
+
+        if(Player.Instance!= null)
+        {
+            Player.Instance.CollectedGoldCount = 100;
+            GoldCountText.text = Player.Instance.CollectedGoldCount.ToString();
+        }
+        else
+        {
+            Debug.LogError("Player does not exist");
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        CheckSelectButtonStatus();
+        CheckBuyButtonStatus();
+        //Debug.Log("SelectedTankIndex:" + SelectedTankIndex);    
     }
 
     private void SortTanks()
@@ -47,14 +71,7 @@ public class MarketManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        CheckSelectButtonStatus();
-        //Debug.Log("SelectedTankIndex:" + SelectedTankIndex);    
-    }
-
-
+    
     public void ChangeTanktToLeft()
     {
         if (isMoveActive == false)
@@ -111,7 +128,7 @@ public class MarketManager : MonoBehaviour
 
     private void CheckSelectButtonStatus()
     {
-        if(SelectedTankIndex == RotationTankIndex)
+        if((int)(Player.Instance.CurrentTank) == RotationTankIndex)
         {
             if(SelectButton.IsActive())
             {
@@ -127,9 +144,38 @@ public class MarketManager : MonoBehaviour
         }
     }
 
+    private void CheckBuyButtonStatus()
+    {
+        if (Player.Instance.BoughtTanks.Contains((ETank)RotationTankIndex))
+        {
+            if (BuyButton.IsActive())
+            {
+                BuyButton.gameObject.SetActive(false);
+            }
+        }
+        else
+        {
+            if (!BuyButton.IsActive())
+            {
+                BuyButton.gameObject.SetActive(true);
+            }
+        }
+    }
+
     public void OnSelectButtonClicked()
     {
-        SelectedTankIndex = RotationTankIndex;
+        Player.Instance.CurrentTank = (ETank)(RotationTankIndex);
+        //SelectedTankIndex = RotationTankIndex;
+    }
+
+    public void OnBuyButtonClicked()
+    {
+        if(Player.Instance.CollectedGoldCount >= TanksPerPrice[RotationTankIndex])
+        {
+            Player.Instance.BoughtTanks.Add((ETank)RotationTankIndex);
+            Player.Instance.CollectedGoldCount -= TanksPerPrice[RotationTankIndex];
+            GoldCountText.text = Player.Instance.CollectedGoldCount.ToString();
+        }
     }
 
     public void OnMainMenuClicked()
