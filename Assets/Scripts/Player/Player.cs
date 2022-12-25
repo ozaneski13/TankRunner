@@ -16,7 +16,6 @@ public class Player : MonoBehaviour
             player._highScore = 0;
             player._currentTank = ETank.Red;
             player._boughtTanks.Add(_currentTank);
-            player._boughtTanks.Add(ETank.Blue);
             player._collectedGoldCount = 0;
 
             SaveManager.SavePlayer(player);
@@ -36,16 +35,32 @@ public class Player : MonoBehaviour
 
     [Header("Save Variables")]
     private int _highScore = 0;
-    public int HighScore => _highScore;
+    public int HighScore
+    {
+        get { return _highScore; }
+        set { _highScore = value; }
+    }
 
     private ETank _currentTank = 0;
-    public ETank CurrentTank => _currentTank;
+    public ETank CurrentTank
+    {
+        get { return _currentTank; }
+        set { _currentTank = value; }
+    }
 
     private List<ETank> _boughtTanks = new List<ETank>();
-    public List<ETank> BoughtTanks => _boughtTanks;
+    public List<ETank> BoughtTanks
+    {
+        get { return _boughtTanks; }
+        set { _boughtTanks = value; }
+    }
 
     private int _collectedGoldCount = 0;
-    public int CollectedGoldCount => _collectedGoldCount;
+    public int CollectedGoldCount
+    {
+        get { return _collectedGoldCount; }
+        set { _collectedGoldCount = value; }
+    }
 
     private void OnDestroy()
     {
