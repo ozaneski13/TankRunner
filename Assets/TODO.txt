@@ -1,15 +1,30 @@
 ﻿TODO
 
+player setter for market
+playerdata highscore
+player dontdestroyonload
 Car spawning system + randomness -> spawn pointleri random aktive et
+load model when tank selected
 zıplama anim? dust effect on buldoze/fire anim/obstacle blowup anim/collectable collected anim ya da clink sound
 tank hp bar
 yeni scene düzeni
 fade between scenes
 
+Spor Araba: +1
+Aile Arabası: +2
+Pikap: +3
+Ambulans: +4
+Polis: +3
+Taksi: +2
+Çöp Kamyonu: +5
+Tır: +4
+Dorseli Tır: +5
+Obstacle: +1
+
 Sounds in Mechanics
 
 can 0ken çarpınca kaybettir
-UI (main manu - pause menu - market?)
+UI (main manu - pause menu - market?-end game score board)
 Sounds UI Main menu/ingame Music
 Fog effect
 Market
