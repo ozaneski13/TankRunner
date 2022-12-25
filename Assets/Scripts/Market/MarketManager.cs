@@ -51,11 +51,18 @@ public class MarketManager : MonoBehaviour
         if(Player.Instance!= null)
         {
             GoldCountText.text = Player.Instance.CollectedGoldCount.ToString();
+            DeactivateCurrentTankModel();
         }
         else
         {
             Debug.LogError("Player does not exist");
         }
+    }
+
+    private void DeactivateCurrentTankModel()
+    {
+
+        Player.Instance.TankPrefabs[(int)(Player.Instance.CurrentTank)].gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -188,7 +195,13 @@ public class MarketManager : MonoBehaviour
 
     public void OnMainMenuClicked()
     {
+        ActivateCurrentTankModel();
         StartCoroutine(LoadMainMenuWithDelay());
+    }
+
+    private void ActivateCurrentTankModel()
+    {
+        Player.Instance.TankPrefabs[(int)(Player.Instance.CurrentTank)].gameObject.SetActive(true);
     }
 
     IEnumerator LoadMainMenuWithDelay()
