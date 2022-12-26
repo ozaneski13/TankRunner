@@ -1,5 +1,6 @@
 ﻿TODO
 
+Sahnede hazır olan prefab üzerine spawn olan prefabın binmesi 
 load model when tank selected -> tank-getmodel
 zıplama anim? dust effect on buldoze/fire anim/obstacle blowup anim/collectable collected anim ya da clink sound
 yeni scene düzeni
