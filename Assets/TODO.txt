@@ -1,9 +1,7 @@
 ﻿TODO
 
-Sahnede hazır olan prefab üzerine spawn olan prefabın binmesi 
 load model when tank selected -> tank-getmodel
 zıplama anim? dust effect on buldoze/fire anim/obstacle blowup anim/collectable collected anim ya da clink sound
-yeni scene düzeni
 
 pause menuden main menuye geçişte araç aşağı düşüyor -> main menuye geçerken rigidbody freeze y tik oyuna geçerken tik kaldır
 
