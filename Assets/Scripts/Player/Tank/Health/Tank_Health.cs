@@ -27,4 +27,9 @@ public class Tank_Health : MonoBehaviour
 
         _currentHealth -= damage;
     }
+
+    public int GetHealth()
+    {
+        return _currentHealth;
+    }
 }
