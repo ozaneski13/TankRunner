@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.65667456, g: 0.7563785, b: 0.80181026, a: 1}
+  m_IndirectSpecularColor: {r: 0.6566746, g: 0.7563785, b: 0.80181015, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -184,7 +184,7 @@ MonoBehaviour:
   _roadEnvironmentPoolParent: {fileID: 1977571474}
   _poolSize: 5
   _roadTreadmill: {fileID: 1680661053}
-  _lastPreCreatedRoad: {fileID: 1485441111}
+  _lastPreCreatedRoad: {fileID: 826543194}
   _penultimateRoad: {fileID: 1253140716}
 --- !u!1 &267887302
 GameObject:
@@ -1670,6 +1670,10 @@ PrefabInstance:
     - target: {fileID: 1338996868599506304, guid: 4739212fb8dd605488f3b0a2d8659149, type: 3}
       propertyPath: m_Name
       value: Environment_A_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941049106743927906, guid: 4739212fb8dd605488f3b0a2d8659149, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4739212fb8dd605488f3b0a2d8659149, type: 3}
