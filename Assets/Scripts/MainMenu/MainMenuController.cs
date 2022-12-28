@@ -3,10 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class MainMenuController : MonoBehaviour
 {
+
+    private void Start()
+    {
+        foreach (var tankModel in Player.Instance.TankPrefabs)
+        {
+            tankModel.gameObject.SetActive(false);
+        }
+    }
+
     public void PlayGame()
     {
+        Player.Instance.TankPrefabs[(int)(Player.Instance.CurrentTank)].gameObject.SetActive(true);
         StartCoroutine(LoadNewScene("SampleScene"));
     }
 
@@ -18,7 +29,6 @@ public class MainMenuController : MonoBehaviour
     public void QuitGame()
     {
         StartCoroutine(QuitWithDelay());
-        
     }
 
     IEnumerator LoadNewScene(string sceneName)
