@@ -1,9 +1,9 @@
 ﻿TODO
 
-load model when tank selected -> tank-getmodel
+//load model when tank selected -> tank-getmodel
 zıplama anim? dust effect on buldoze/fire anim/obstacle blowup anim/collectable collected anim ya da clink sound
 
-pause menuden main menuye geçişte araç aşağı düşüyor -> main menuye geçerken rigidbody freeze y tik oyuna geçerken tik kaldır
+//pause menuden main menuye geçişte araç aşağı düşüyor -> main menuye geçerken rigidbody freeze y tik oyuna geçerken tik kaldır
 
 fade between scenes
 Fade main menu ridigbody delay
