@@ -20,7 +20,7 @@ public class Tank_Jump : MonoBehaviour
 
     private void Start()
     {
-        _player = Player.Instance;
+        //_player = Player.Instance;
     }
 
     public void Jump()
@@ -34,7 +34,8 @@ public class Tank_Jump : MonoBehaviour
         {
             _isGrounded = true;
 
-            _player.Tank.BuldozeStatus(false);
+            //_player.Tank.BuldozeStatus(false);
+            Player.Instance.Tank.BuldozeStatus(false);
         }
     }
 
@@ -42,11 +43,13 @@ public class Tank_Jump : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
-            _player.Tank.CinemachineController.ShakeCamera(_jumpShakeIntensity);
+            //_player.Tank.CinemachineController.ShakeCamera(_jumpShakeIntensity);
+            Player.Instance.Tank.CinemachineController.ShakeCamera(_jumpShakeIntensity);
 
             _isGrounded = false;
 
-            _player.Tank.BuldozeStatus(true);
+            //_player.Tank.BuldozeStatus(true);
+            Player.Instance.Tank.BuldozeStatus(true);
         }
     }
 }
