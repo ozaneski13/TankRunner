@@ -13,11 +13,14 @@ public class MainMenuController : MonoBehaviour
         {
             tankModel.gameObject.SetActive(false);
         }
+
+        Player.Instance.Tank.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation ;
     }
 
     public void PlayGame()
     {
         Player.Instance.TankPrefabs[(int)(Player.Instance.CurrentTank)].gameObject.SetActive(true);
+        Player.Instance.Tank.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         StartCoroutine(LoadNewScene("SampleScene"));
     }
 
