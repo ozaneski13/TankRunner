@@ -145,7 +145,10 @@ public class MarketManager : MonoBehaviour
         {
             if(SelectButton.IsActive())
             {
-                SelectButton.gameObject.SetActive(false);
+                if (Player.Instance.BoughtTanks.Contains((ETank)RotationTankIndex))
+                {
+                    SelectButton.gameObject.SetActive(false);
+                }
             }
         }
         else
@@ -179,7 +182,10 @@ public class MarketManager : MonoBehaviour
 
     public void OnSelectButtonClicked()
     {
-        Player.Instance.CurrentTank = (ETank)(RotationTankIndex);
+        if(Player.Instance.BoughtTanks.Contains((ETank)(RotationTankIndex)))
+        {
+            Player.Instance.CurrentTank = (ETank)(RotationTankIndex);
+        }
         //SelectedTankIndex = RotationTankIndex;
     }
 
