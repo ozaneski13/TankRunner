@@ -9,10 +9,10 @@ public class Player : MonoBehaviour
     {
         if (Instance == null)
             Instance = this;
-        /*else if (Instance != this)
+        else if (Instance != this)
         {
             Destroy(gameObject);
-        }*/
+        }
         DontDestroyOnLoad(gameObject);
 
         if (SaveManager.LoadPlayer() == null)
