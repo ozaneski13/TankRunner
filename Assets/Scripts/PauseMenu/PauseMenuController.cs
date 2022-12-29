@@ -12,6 +12,8 @@ public class PauseMenuController : MonoBehaviour
     private Button PauseButton;
     [SerializeField]
     private GameObject PausePanel;
+    [SerializeField]
+    FadeController FC;
 
     public void OnPauseButtonClicked()
     {
@@ -28,11 +30,13 @@ public class PauseMenuController : MonoBehaviour
     public void OnMainMenuButtonClicked()
     {
         StartCoroutine(LoadMainMenu());
+
+        FC.ActivateSlowFadeOut();
     }
 
     private IEnumerator LoadMainMenu()
     {
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForSeconds(0.015f);
         Time.timeScale = 1f;
         if(MusicManager.Instance)
         {

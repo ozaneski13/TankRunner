@@ -29,6 +29,8 @@ public class MarketManager : MonoBehaviour
     static bool isMoveActive = false;
     float ChangeSpeed = 10f;
     int RotationTankIndex = 0;
+    [SerializeField]
+    FadeController fC;
     //static int SelectedTankIndex = 0;
 
     void Awake()
@@ -203,6 +205,7 @@ public class MarketManager : MonoBehaviour
     {
         ActivateCurrentTankModel();
         StartCoroutine(LoadMainMenuWithDelay());
+        fC.ActivateFadeOut();
     }
 
     private void ActivateCurrentTankModel()
@@ -212,7 +215,7 @@ public class MarketManager : MonoBehaviour
 
     IEnumerator LoadMainMenuWithDelay()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.8f);
         SceneManager.LoadScene("MainMenu");
     }
 
