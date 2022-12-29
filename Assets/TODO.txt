@@ -1,6 +1,5 @@
 ﻿TODO
 
-spawn olan car oyuncuya doğru baksın
 zıplama anim? dust effect on buldoze/fire anim/obstacle blowup anim/collectable collected anim ya da clink sound
 ingame gölgelerde bozukluk
 
