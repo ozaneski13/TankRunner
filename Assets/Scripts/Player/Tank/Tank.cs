@@ -38,11 +38,6 @@ public class Tank : MonoBehaviour
     private bool _isImmune = false;
     public bool IsImmune => _isImmune;
 
-    private void Awake()
-    {
-        GetMaterials();
-    }
-
     private void Update()
     {
         if (_isTimerStarted)
@@ -64,7 +59,7 @@ public class Tank : MonoBehaviour
         }
     }
 
-    private void GetMaterials()
+    public void GetMaterials()
     {
         MeshRenderer[] meshRenderers = GetComponentsInChildren<MeshRenderer>();
 

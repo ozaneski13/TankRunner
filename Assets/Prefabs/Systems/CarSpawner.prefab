@@ -85,4 +85,5 @@ MonoBehaviour:
   - {fileID: 5905791148023043781, guid: 258a2ba66186b0649a980d8c6c1046d2, type: 3}
   - {fileID: 4534796469927074925, guid: 9f085c1214229804ab66372e5bb9cd73, type: 3}
   _carPoolParent: {fileID: 2877815250587797850}
-  _durationBeforeSpawn: 3
+  _maxDurationBeforeSpawn: 3
+  _minDurationBeforeSpawn: 6

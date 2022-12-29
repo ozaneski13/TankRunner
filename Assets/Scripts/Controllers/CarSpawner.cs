@@ -31,7 +31,7 @@ public class CarSpawner : MonoBehaviour
     {
         foreach (Transform car in _carPrefabs)
         {
-            Transform tempTransform = Instantiate(car, transform.position, Quaternion.identity, _carPoolParent);
+            Transform tempTransform = Instantiate(car, transform.position, car.transform.rotation, _carPoolParent);
             tempTransform.gameObject.SetActive(false);
 
             _carPool.Add(tempTransform);

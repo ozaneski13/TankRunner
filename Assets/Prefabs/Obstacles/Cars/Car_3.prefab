@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 8294625847925324924}
   - component: {fileID: -5622792351639674059}
   - component: {fileID: 2259674220399890556}
+  - component: {fileID: -3169500450081937219}
+  - component: {fileID: -4927520579063743224}
+  - component: {fileID: 5430202521838501474}
   m_Layer: 0
   m_Name: Car_3
   m_TagString: Obstacle
@@ -25,14 +28,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2299629537460470689}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 825093713509457938}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &-5622792351639674059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,6 +63,51 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5, z: 1.4}
   m_Center: {x: 0, y: 0.25, z: 0.1}
+--- !u!54 &-3169500450081937219
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2299629537460470689}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 0
+--- !u!114 &-4927520579063743224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2299629537460470689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d475d9665db768344b63f5edfafe7954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 100
+  _spinCoef: 50
+--- !u!114 &5430202521838501474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2299629537460470689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb95705978db9c846b20945df8e29b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _wheels:
+  - {fileID: 5712184407631996898}
+  - {fileID: 6555479680348405655}
 --- !u!1 &6485983023577516312
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,5 +199,15 @@ PrefabInstance:
 --- !u!4 &5082053453458000466 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fc94263237b6b8b4eb593349d7bab9cf, type: 3}
+  m_PrefabInstance: {fileID: 4687593886771850681}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5712184407631996898 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8194179977689036197, guid: fc94263237b6b8b4eb593349d7bab9cf, type: 3}
+  m_PrefabInstance: {fileID: 4687593886771850681}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6555479680348405655 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7209115367906405842, guid: fc94263237b6b8b4eb593349d7bab9cf, type: 3}
   m_PrefabInstance: {fileID: 4687593886771850681}
   m_PrefabAsset: {fileID: 0}

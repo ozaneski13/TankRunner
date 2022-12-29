@@ -6,8 +6,6 @@ public class Tank_Jump : MonoBehaviour
     [SerializeField] private float _jumpForce = 200f;
     [SerializeField] private float _jumpShakeIntensity = 0.5f;
 
-    private Player _player = null;
-
     private Rigidbody _rb = null;
 
     private bool _isGrounded = true;
@@ -16,11 +14,6 @@ public class Tank_Jump : MonoBehaviour
     private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
-    }
-
-    private void Start()
-    {
-        //_player = Player.Instance;
     }
 
     public void Jump()
@@ -34,7 +27,6 @@ public class Tank_Jump : MonoBehaviour
         {
             _isGrounded = true;
 
-            //_player.Tank.BuldozeStatus(false);
             Player.Instance.Tank.BuldozeStatus(false);
         }
     }
@@ -43,12 +35,10 @@ public class Tank_Jump : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
-            //_player.Tank.CinemachineController.ShakeCamera(_jumpShakeIntensity);
             Player.Instance.Tank.CinemachineController.ShakeCamera(_jumpShakeIntensity);
 
             _isGrounded = false;
 
-            //_player.Tank.BuldozeStatus(true);
             Player.Instance.Tank.BuldozeStatus(true);
         }
     }

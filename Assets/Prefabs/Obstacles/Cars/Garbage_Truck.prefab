@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 6821737726249840732}
   - component: {fileID: 987092711152299448}
   - component: {fileID: 8057099347051108987}
+  - component: {fileID: -2934350786704108072}
+  - component: {fileID: -4348856466105999478}
+  - component: {fileID: 7163346473979757138}
   m_Layer: 0
   m_Name: Garbage_Truck
   m_TagString: Obstacle
@@ -25,14 +28,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 962976299913090427}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9000844231577350578}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &987092711152299448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,6 +63,52 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.7, z: 1.8}
   m_Center: {x: 0, y: 0.35, z: 0}
+--- !u!54 &-2934350786704108072
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962976299913090427}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 0
+--- !u!114 &-4348856466105999478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962976299913090427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d475d9665db768344b63f5edfafe7954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 100
+  _spinCoef: 50
+--- !u!114 &7163346473979757138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962976299913090427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb95705978db9c846b20945df8e29b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _wheels:
+  - {fileID: 7266261895504901826}
+  - {fileID: 2812859683854043983}
+  - {fileID: 315982785687777558}
 --- !u!1 &4672206018182356146
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,5 +200,20 @@ PrefabInstance:
 --- !u!4 &551157876598031223 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ca29ae05049aed84bb51b30d57bb939d, type: 3}
+  m_PrefabInstance: {fileID: 12563390693483676}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7266261895504901826 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1947154947595103650, guid: ca29ae05049aed84bb51b30d57bb939d, type: 3}
+  m_PrefabInstance: {fileID: 12563390693483676}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2812859683854043983 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2820918769903661011, guid: ca29ae05049aed84bb51b30d57bb939d, type: 3}
+  m_PrefabInstance: {fileID: 12563390693483676}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &315982785687777558 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 310250283567109514, guid: ca29ae05049aed84bb51b30d57bb939d, type: 3}
   m_PrefabInstance: {fileID: 12563390693483676}
   m_PrefabAsset: {fileID: 0}

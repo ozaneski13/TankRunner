@@ -8,6 +8,7 @@ TagManager:
   - Tank
   - Obstacle
   - Magnet
+  - CarParent
   layers:
   - Default
   - TransparentFX
