@@ -16,8 +16,7 @@ public class Obstacle : Collectable
 
     private void OnEnable()
     {
-        GetComponentInChildren<MeshRenderer>().enabled = true;
-        GetComponentInChildren<Collider>().enabled = true;
+        ToggleObstacles(true);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -25,8 +24,19 @@ public class Obstacle : Collectable
         if (other.gameObject.tag != "Tank")
             return;
 
-        GetComponentInChildren<MeshRenderer>().enabled = false;
-        GetComponentInChildren<Collider>().enabled = false;
+        ToggleObstacles(false);
+    }
+
+    private void ToggleObstacles(bool toggle)
+    {
+        MeshRenderer[] meshRenderers = GetComponentsInChildren<MeshRenderer>();
+        Collider[] colliders = GetComponentsInChildren<Collider>();
+
+        foreach(MeshRenderer meshRenderer in meshRenderers)
+            meshRenderer.enabled = toggle;
+
+        foreach (Collider collider in colliders)
+            collider.enabled = toggle;
     }
 
     public override void PlayerCollided()
