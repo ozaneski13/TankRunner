@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class PauseMenuController : MonoBehaviour
 {
+    private string MainMenuName = "MainMenu";
 
     [SerializeField]
     private Button PauseButton;
@@ -42,7 +43,7 @@ public class PauseMenuController : MonoBehaviour
         {
             MusicManager.Instance.SetToMenuMusic();
         }
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene(MainMenuName);
     }
 
 }

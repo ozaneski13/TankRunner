@@ -8,6 +8,8 @@ using UnityEngine.UI;
 public class MarketManager : MonoBehaviour
 {
 
+    public string MainMenuName = "MainMenu";
+
     public static MarketManager Instance = null;
 
     [SerializeField]
@@ -216,7 +218,7 @@ public class MarketManager : MonoBehaviour
     IEnumerator LoadMainMenuWithDelay()
     {
         yield return new WaitForSeconds(.8f);
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene(MainMenuName);
     }
 
 }
