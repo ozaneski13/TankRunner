@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -83,6 +84,7 @@ public class RoadManager : MonoBehaviour
             if (_lastRoad.GetComponent<Road>().RoadEnvironmentType != roadEnvironment.GetComponent<Road>().RoadEnvironmentType)
             {
                 int childCount = _lastRoad.childCount;
+                childCount--; //SpawnerHolder
 
                 Vector3 newPosition = _currentPosition + new Vector3(0, 0, _environmentOffset * childCount);
 

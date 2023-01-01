@@ -184,7 +184,7 @@ MonoBehaviour:
   _roadEnvironmentPoolParent: {fileID: 1977571474}
   _poolSize: 5
   _roadTreadmill: {fileID: 1680661053}
-  _lastPreCreatedRoad: {fileID: 826543194}
+  _lastPreCreatedRoad: {fileID: 1485441111}
   _penultimateRoad: {fileID: 1253140716}
 --- !u!1 &267887302
 GameObject:
@@ -2048,7 +2048,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7668799957786738905, guid: 65f532ea0642c2940925554cc6614c2f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 60
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 7668799957786738905, guid: 65f532ea0642c2940925554cc6614c2f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2162,7 +2162,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1350070191286338812, guid: 8299135b7559f3145be2fd4840e95755, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 75
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 1350070191286338812, guid: 8299135b7559f3145be2fd4840e95755, type: 3}
       propertyPath: m_LocalRotation.w
