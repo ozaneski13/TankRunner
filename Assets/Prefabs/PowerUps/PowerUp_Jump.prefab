@@ -73,7 +73,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8276813060312086407}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.4, y: 0.4, z: 0.1}
@@ -90,6 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc550c0f905bdd9428fff3bb0f7e93cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _meshRenderer: {fileID: 2327044831558390506}
+  _collider: {fileID: 7172857497156686618}
   _powerUpDuration: 5
   _jumpCount: 5
 --- !u!95 &4821041915704509409
@@ -171,5 +173,10 @@ PrefabInstance:
 --- !u!4 &3458903247126636933 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4a53d20a50c35d24e9fd174c3dbb287a, type: 3}
+  m_PrefabInstance: {fileID: 4002230365884305006}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &2327044831558390506 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 4a53d20a50c35d24e9fd174c3dbb287a, type: 3}
   m_PrefabInstance: {fileID: 4002230365884305006}
   m_PrefabAsset: {fileID: 0}

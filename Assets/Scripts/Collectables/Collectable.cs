@@ -2,16 +2,10 @@ using UnityEngine;
 
 public abstract class Collectable : MonoBehaviour, ICollectable
 {
+    [SerializeField] private MeshRenderer _meshRenderer = null;
+    [SerializeField] private BoxCollider _collider = null;
+
     protected Player _player = null;
-
-    private MeshRenderer _meshRenderer = null;
-    private Collider _collider = null;
-
-    private void Awake()
-    {
-        _meshRenderer = GetComponentInChildren<MeshRenderer>();
-        _collider = GetComponentInChildren<Collider>();
-    }
 
     private void Start()
     {
