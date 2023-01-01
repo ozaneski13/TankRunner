@@ -12,7 +12,7 @@ public class CarSpawner : MonoBehaviour
 
     private List<Transform> _carPool = new List<Transform>();
 
-    private void Start()
+    private void Awake()
     {
         FillCarPool();
     }
