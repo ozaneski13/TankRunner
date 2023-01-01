@@ -30,6 +30,14 @@ public class Obstacle_Car_Movement : MonoBehaviour
         MoveForward();
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag != "Obstacle")
+            return;
+
+        gameObject.SetActive(false);
+    }
+
     private void RotateWheels()
     {
         foreach (Transform transform in _wheels)

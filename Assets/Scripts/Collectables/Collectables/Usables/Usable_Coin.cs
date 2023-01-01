@@ -17,8 +17,9 @@ public class Usable_Coin : Usables
         PointManager.Instance.PointGained(_point);
     }
 
-    private void Awake()
+    public override void Awake()
     {
+        base.Awake();
         _startTransform = transform;
     }
 

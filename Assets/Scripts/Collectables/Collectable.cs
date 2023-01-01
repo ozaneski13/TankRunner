@@ -2,10 +2,16 @@ using UnityEngine;
 
 public abstract class Collectable : MonoBehaviour, ICollectable
 {
-    [SerializeField] private MeshRenderer _meshRenderer = null;
-    [SerializeField] private BoxCollider _collider = null;
-
     protected Player _player = null;
+
+    private MeshRenderer[] _meshRenderers = null;
+    private Collider[] _colliders = null;
+
+    public virtual void Awake()
+    {
+        _meshRenderers = GetComponentsInChildren<MeshRenderer>();
+        _colliders = GetComponentsInChildren<Collider>();
+    }
 
     private void Start()
     {
@@ -22,8 +28,11 @@ public abstract class Collectable : MonoBehaviour, ICollectable
 
     public virtual void PlayerCollided()
     {
-        _meshRenderer.enabled = false;
-        _collider.enabled = false;
+        foreach(MeshRenderer meshRenderer in _meshRenderers)
+            meshRenderer.enabled = false;
+
+        foreach (Collider collider in _colliders)
+            collider.enabled = false;
 
         CollectedVisuals();
     }
