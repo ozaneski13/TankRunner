@@ -38,6 +38,8 @@ public class Tank : MonoBehaviour
     private bool _isImmune = false;
     public bool IsImmune => _isImmune;
 
+    private bool _isRoutineActive = false;
+
     private void Update()
     {
         if (_isTimerStarted)
@@ -55,7 +57,8 @@ public class Tank : MonoBehaviour
 
             RoadManager.Instance.RoadTreadmill.TankCrashed();
             
-            StartCoroutine(ImmuneRoutine());
+            if(!_isRoutineActive)
+                StartCoroutine(ImmuneRoutine());
         }
     }
 
@@ -85,6 +88,7 @@ public class Tank : MonoBehaviour
 
     private IEnumerator ImmuneRoutine()
     {
+        _isRoutineActive = true;
         _isImmune = true;
         _isTimerStarted = true;
 
@@ -101,6 +105,7 @@ public class Tank : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
         }
 
+        _isRoutineActive = false;
         _isImmune = false;
         _isTimerStarted = false;
         _routineTimer = 0f;

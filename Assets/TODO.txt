@@ -1,7 +1,5 @@
 ﻿TODO
 
-spawner only spawns 1 car
-immune bug
 zıplama anim? dust effect on buldoze/fire anim/obstacle blowup anim/collectable collected anim ya da clink sound
 ingame gölgelerde bozukluk
 
