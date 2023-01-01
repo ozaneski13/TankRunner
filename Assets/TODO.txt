@@ -3,16 +3,9 @@
 zıplama anim? dust effect on buldoze/fire anim/obstacle blowup anim/collectable collected anim ya da clink sound
 ingame gölgelerde bozukluk
 
-//pause menuden main menuye geçişte araç aşağı düşüyor -> main menuye geçerken rigidbody freeze y tik oyuna geçerken tik kaldır
-
 can 0ken çarpınca kaybettir endgame ui playerın save edilmesi vsvs
 Sounds in Mechanics
-UI (main menu(background update) - market(mechanics-tanks)-end game score board)
-//fade between scenes
-//Fade main menu ridigbody delay
-//scene geçişlerinde soluk ışığın güncellenmesi
-//tank hp bar
-//Sounds UI ingame Music
+UI (end game score board)
 
 cinemachine start camera effects
 Day-Night?
