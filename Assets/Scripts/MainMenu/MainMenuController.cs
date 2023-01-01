@@ -4,6 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
+
+    private string GameSceneName = "GameScene";
+    private string MarketSceneName = "MarketScene";
+
     [SerializeField] private FadeController _fC = null;
 
     private void Start()
@@ -20,13 +24,13 @@ public class MainMenuController : MonoBehaviour
     {
         Player.Instance.TankPrefabs[(int)(Player.Instance.CurrentTank)].gameObject.SetActive(true);
         Player.Instance.Tank.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-        StartCoroutine(LoadNewScene("GameScene"));
+        StartCoroutine(LoadNewScene(GameSceneName));
         _fC.ActivateFadeOut();
     }
 
     public void OpenMarket()
     {
-        StartCoroutine(LoadNewScene("MarketScene"));
+        StartCoroutine(LoadNewScene(MarketSceneName));
         _fC.ActivateFadeOut();
     }
 
@@ -39,7 +43,7 @@ public class MainMenuController : MonoBehaviour
     {
         yield return new WaitForSeconds(.8f);
 
-        if(sceneName == "GameScene")
+        if(sceneName == GameSceneName)
             MusicManager.Instance.SetToGameMusic();
 
         SceneManager.LoadScene(sceneName);
