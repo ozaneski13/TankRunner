@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -8589179401589522271}
   m_Layer: 0
   m_Name: PowerUp_Random
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,8 +59,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddeb7de0229c77d40b4f17d9eedc39e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _meshRenderer: {fileID: 344461776242912124}
-  _collider: {fileID: 7928352847068947140}
   _powerUpDuration: 5
   _powerUpUseCount: 5
 --- !u!95 &-8589179401589522271
@@ -173,10 +171,5 @@ PrefabInstance:
 --- !u!4 &1480816718702399507 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e29ea5a73ba68974fab31ff7a7f5f412, type: 3}
-  m_PrefabInstance: {fileID: 1370874983400224760}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &344461776242912124 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: e29ea5a73ba68974fab31ff7a7f5f412, type: 3}
   m_PrefabInstance: {fileID: 1370874983400224760}
   m_PrefabAsset: {fileID: 0}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8807848688280384894}
   m_Layer: 0
   m_Name: PowerUp_Fire
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,8 +59,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27812da736db3c844b463bbdc06de2d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _meshRenderer: {fileID: 8105375240782728205}
-  _collider: {fileID: 5980213323262473908}
   _powerUpDuration: 5
   _fireCount: 3
 --- !u!95 &8807848688280384894
@@ -173,10 +171,5 @@ PrefabInstance:
 --- !u!4 &6933079467602884450 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4a8e51830e516c0499f06b185f9df922, type: 3}
-  m_PrefabInstance: {fileID: 7475278804525207689}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &8105375240782728205 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 4a8e51830e516c0499f06b185f9df922, type: 3}
   m_PrefabInstance: {fileID: 7475278804525207689}
   m_PrefabAsset: {fileID: 0}

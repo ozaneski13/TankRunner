@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: -717600872175795904}
   m_Layer: 0
   m_Name: PowerUp_Magnet
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,8 +77,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bef947ac029de2428ad87b3ac5bc0c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _meshRenderer: {fileID: 7600225798941361053}
-  _collider: {fileID: 8416624934910407346}
   _powerUpDuration: 5
 --- !u!65 &8416624934910407346
 BoxCollider:
@@ -172,10 +170,5 @@ PrefabInstance:
 --- !u!4 &8733114937539770610 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 50b7421529bfdfb4d89c92f67fc25246, type: 3}
-  m_PrefabInstance: {fileID: 9131321720027373337}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &7600225798941361053 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 50b7421529bfdfb4d89c92f67fc25246, type: 3}
   m_PrefabInstance: {fileID: 9131321720027373337}
   m_PrefabAsset: {fileID: 0}

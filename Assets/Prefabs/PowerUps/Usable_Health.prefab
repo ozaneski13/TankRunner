@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5300161679944887123}
   m_Layer: 0
   m_Name: Usable_Health
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,8 +59,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5605a4721bb439e4897b8fc0e8cbfedd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _meshRenderer: {fileID: 5593559254066811843}
-  _collider: {fileID: 4278049035500361045}
   _healthValue: 20
 --- !u!95 &5300161679944887123
 Animator:
@@ -172,10 +170,5 @@ PrefabInstance:
 --- !u!4 &6767639607633750188 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 07046fd848d8b0f439334660c3c06280, type: 3}
-  m_PrefabInstance: {fileID: 6512703280108457799}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &5593559254066811843 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 07046fd848d8b0f439334660c3c06280, type: 3}
   m_PrefabInstance: {fileID: 6512703280108457799}
   m_PrefabAsset: {fileID: 0}
