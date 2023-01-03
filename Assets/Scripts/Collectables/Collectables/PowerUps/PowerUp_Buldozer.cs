@@ -4,6 +4,6 @@ public class PowerUp_Buldozer : PowerUps
     {
         base.PlayerCollided();
 
-        _player.PowerUpController.StartPowerUp_Buldoze(_powerUpDuration);
+        Player.Instance.PowerUpController.StartPowerUp_Buldoze(_powerUpDuration);
     }
 }

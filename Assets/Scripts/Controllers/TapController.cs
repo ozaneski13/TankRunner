@@ -6,14 +6,7 @@ public class TapController : MonoBehaviour
     [Header("Tap Settings")]
     [SerializeField] private float _doubleTapThreshold = 0.3f;
 
-    private Player _player = null;
-
     private int _tapCount = 0;
-
-    private void Start()
-    {
-        _player = Player.Instance;
-    }
 
     private void Update()
     {
@@ -28,7 +21,7 @@ public class TapController : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            _player.PowerUpController.Fire();
+            Player.Instance.PowerUpController.Jump();
         }
     }
 
@@ -39,13 +32,13 @@ public class TapController : MonoBehaviour
         if (_tapCount == 1)
         {
             _tapCount = 0;
-            _player.PowerUpController.Jump();
+            Player.Instance.PowerUpController.Jump();
         }
 
         else if (_tapCount == 2)
         {
             _tapCount = 0;
-            _player.PowerUpController.Fire();
+            Player.Instance.PowerUpController.Fire();
         }
     }
 }

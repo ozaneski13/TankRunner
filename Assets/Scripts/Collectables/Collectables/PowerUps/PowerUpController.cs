@@ -6,8 +6,6 @@ public class PowerUpController : MonoBehaviour
     [Header("Reload Duration of Gun")]
     [SerializeField] private float _reloadDutaion = 0.5f;
 
-    private Player _player = null;
-
     private Tank _tank = null;
 
     private IEnumerator _powerUpRoutine = null;
@@ -19,9 +17,7 @@ public class PowerUpController : MonoBehaviour
 
     private void Start()
     {
-        _player = Player.Instance;
-
-        _tank = _player.Tank;
+        _tank = Player.Instance.Tank;
     }
 
     private IEnumerator PowerUpRoutine(float duration, EStatus newStatus)
@@ -43,6 +39,8 @@ public class PowerUpController : MonoBehaviour
 
         else if (newStatus == EStatus.Magnet)
             _tank.TankMagnet.ToggleMagnet(false);
+
+        _tank.ImmuneStatus(false);
     }
 
     public void StartPowerUp_Fire(int fireCount, float powerUpDuration)

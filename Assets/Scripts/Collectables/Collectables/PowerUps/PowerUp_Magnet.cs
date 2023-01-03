@@ -4,6 +4,6 @@ public class PowerUp_Magnet : PowerUps
     {
         base.PlayerCollided();
 
-        _player.PowerUpController.StartPowerUp_Magnet(_powerUpDuration);
+        Player.Instance.PowerUpController.StartPowerUp_Magnet(_powerUpDuration);
     }
 }

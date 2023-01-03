@@ -8,6 +8,6 @@ public class Usable_Health : Usables
     {
         base.PlayerCollided();
 
-        _player.Tank.TankHealth.IncreaseHealth(_healthValue);
+        Player.Instance.Tank.TankHealth.IncreaseHealth(_healthValue);
     }
 }

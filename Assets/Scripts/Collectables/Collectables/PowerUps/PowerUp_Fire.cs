@@ -9,6 +9,6 @@ public class PowerUp_Fire : PowerUps
     {
         base.PlayerCollided();
 
-        _player.PowerUpController.StartPowerUp_Fire(_fireCount, _powerUpDuration);
+        Player.Instance.PowerUpController.StartPowerUp_Fire(_fireCount, _powerUpDuration);
     }
 }

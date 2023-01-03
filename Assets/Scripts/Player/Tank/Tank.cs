@@ -124,4 +124,9 @@ public class Tank : MonoBehaviour
         else if (_currentStatus != EStatus.Buldozer || (_currentStatus == EStatus.Jump && !status)) 
             _cinemachineController.ShakeCamera(0);
     }
+
+    public void ImmuneStatus(bool status)
+    {
+        _isImmune = status;
+    }
 }

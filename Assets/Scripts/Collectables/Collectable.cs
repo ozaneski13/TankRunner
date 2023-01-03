@@ -2,8 +2,6 @@ using UnityEngine;
 
 public abstract class Collectable : MonoBehaviour, ICollectable
 {
-    protected Player _player = null;
-
     private MeshRenderer[] _meshRenderers = null;
     private Collider[] _colliders = null;
 
@@ -13,9 +11,13 @@ public abstract class Collectable : MonoBehaviour, ICollectable
         _colliders = GetComponentsInChildren<Collider>();
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        _player = Player.Instance;
+        foreach (MeshRenderer meshRenderer in _meshRenderers)
+            meshRenderer.enabled = true;
+
+        foreach (Collider collider in _colliders)
+            collider.enabled = true;
     }
 
     private void OnTriggerEnter(Collider other)

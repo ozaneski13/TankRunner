@@ -9,6 +9,6 @@ public class PowerUp_Jump : PowerUps
     {
         base.PlayerCollided();
 
-        _player.PowerUpController.StartPowerUp_Jump(_jumpCount, _powerUpDuration);
+        Player.Instance.PowerUpController.StartPowerUp_Jump(_jumpCount, _powerUpDuration);
     }
 }

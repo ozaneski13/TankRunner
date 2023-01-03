@@ -48,7 +48,7 @@ public class Obstacle : Collectable
     {
         //Start blow up animation
 
-        if (_player.Tank.IsImmune)
+        if (Player.Instance.Tank.IsImmune)
             return;
 
         _pointManager.PointGained(_blowUpPoint);

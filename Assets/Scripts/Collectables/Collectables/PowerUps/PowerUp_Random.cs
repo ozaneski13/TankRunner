@@ -11,12 +11,12 @@ public class PowerUp_Random : PowerUps
         int randomPowerUp = Random.Range(0, 4);
 
         if(randomPowerUp == 0 )
-            _player.PowerUpController.StartPowerUp_Buldoze(_powerUpDuration);
-        if (randomPowerUp == 0)
-            _player.PowerUpController.StartPowerUp_Magnet(_powerUpDuration);
-        if (randomPowerUp == 0)
-            _player.PowerUpController.StartPowerUp_Fire(_powerUpUseCount, _powerUpDuration);
-        if (randomPowerUp == 0)
-            _player.PowerUpController.StartPowerUp_Jump(_powerUpUseCount, _powerUpDuration);
+            Player.Instance.PowerUpController.StartPowerUp_Buldoze(_powerUpDuration);
+        if (randomPowerUp == 1)
+            Player.Instance.PowerUpController.StartPowerUp_Magnet(_powerUpDuration);
+        if (randomPowerUp == 2)
+            Player.Instance.PowerUpController.StartPowerUp_Fire(_powerUpUseCount, _powerUpDuration);
+        if (randomPowerUp == 3)
+            Player.Instance.PowerUpController.StartPowerUp_Jump(_powerUpUseCount, _powerUpDuration);
     }
 }
