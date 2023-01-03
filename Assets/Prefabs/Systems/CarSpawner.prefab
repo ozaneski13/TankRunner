@@ -84,6 +84,16 @@ MonoBehaviour:
   - {fileID: 6821737726249840732, guid: e6646870dff2f1b45beb4b6ca46fc76c, type: 3}
   - {fileID: 5905791148023043781, guid: 258a2ba66186b0649a980d8c6c1046d2, type: 3}
   - {fileID: 4534796469927074925, guid: 9f085c1214229804ab66372e5bb9cd73, type: 3}
+  - {fileID: 36396837634694628, guid: 7a3d9470e2c19c24b8471d1f06515d55, type: 3}
+  - {fileID: 8132264935220857385, guid: f5b8cf4e719a34b48ae22fe65e9483c7, type: 3}
+  - {fileID: 6135586008335488331, guid: 700a8a2bcdff4fa4daff89f7a34ee2c9, type: 3}
+  - {fileID: 3369266615903839541, guid: eb43ab706a12dcf4599de1428e1c8dc3, type: 3}
+  - {fileID: 1893976771158023533, guid: 21c7e93cc166c7b4aac17b128d1014d7, type: 3}
+  - {fileID: 7291650668486457338, guid: adecc196a6167234da5e7153bbc5af5f, type: 3}
+  - {fileID: 5564331019972742280, guid: 3d34497ccada7b04cb9d41bdd6f4e525, type: 3}
+  - {fileID: 5368744254512015462, guid: 666e16b2a82df114d9264918bc128038, type: 3}
+  - {fileID: 6775065395596197534, guid: 5648d6071ac72564aa2a990adb15e597, type: 3}
+  - {fileID: 9200065602800177023, guid: a38fbb62c1d8a01429b58f26fe74582f, type: 3}
   _carPoolParent: {fileID: 2877815250587797850}
   _maxDurationBeforeSpawn: 3
   _minDurationBeforeSpawn: 6

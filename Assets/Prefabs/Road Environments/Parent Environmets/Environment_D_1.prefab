@@ -105,11 +105,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2017185618731743226, guid: fdb93d1ae98e10a44a9be02f11096738, type: 3}
       propertyPath: _maxDurationBeforeSpawn
-      value: 12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2017185618731743226, guid: fdb93d1ae98e10a44a9be02f11096738, type: 3}
       propertyPath: _minDurationBeforeSpawn
-      value: 14
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4796330151611742460, guid: fdb93d1ae98e10a44a9be02f11096738, type: 3}
       propertyPath: m_Name
@@ -175,11 +175,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2017185618731743226, guid: fdb93d1ae98e10a44a9be02f11096738, type: 3}
       propertyPath: _maxDurationBeforeSpawn
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2017185618731743226, guid: fdb93d1ae98e10a44a9be02f11096738, type: 3}
       propertyPath: _minDurationBeforeSpawn
-      value: 12
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4796330151611742460, guid: fdb93d1ae98e10a44a9be02f11096738, type: 3}
       propertyPath: m_Name
@@ -199,7 +199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8883094940560267940, guid: fdb93d1ae98e10a44a9be02f11096738, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.31
+      value: 13.58
       objectReference: {fileID: 0}
     - target: {fileID: 8883094940560267940, guid: fdb93d1ae98e10a44a9be02f11096738, type: 3}
       propertyPath: m_LocalRotation.w
@@ -369,11 +369,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2017185618731743226, guid: fdb93d1ae98e10a44a9be02f11096738, type: 3}
       propertyPath: _maxDurationBeforeSpawn
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2017185618731743226, guid: fdb93d1ae98e10a44a9be02f11096738, type: 3}
       propertyPath: _minDurationBeforeSpawn
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4796330151611742460, guid: fdb93d1ae98e10a44a9be02f11096738, type: 3}
       propertyPath: m_Name
@@ -393,7 +393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8883094940560267940, guid: fdb93d1ae98e10a44a9be02f11096738, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.31
+      value: 7.43
       objectReference: {fileID: 0}
     - target: {fileID: 8883094940560267940, guid: fdb93d1ae98e10a44a9be02f11096738, type: 3}
       propertyPath: m_LocalRotation.w
@@ -499,6 +499,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3745480548604411551}
     m_Modifications:
+    - target: {fileID: 2017185618731743226, guid: fdb93d1ae98e10a44a9be02f11096738, type: 3}
+      propertyPath: _maxDurationBeforeSpawn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2017185618731743226, guid: fdb93d1ae98e10a44a9be02f11096738, type: 3}
+      propertyPath: _minDurationBeforeSpawn
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4796330151611742460, guid: fdb93d1ae98e10a44a9be02f11096738, type: 3}
       propertyPath: m_Name
       value: CarSpawner
@@ -517,7 +525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8883094940560267940, guid: fdb93d1ae98e10a44a9be02f11096738, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.31
+      value: 6.34
       objectReference: {fileID: 0}
     - target: {fileID: 8883094940560267940, guid: fdb93d1ae98e10a44a9be02f11096738, type: 3}
       propertyPath: m_LocalRotation.w

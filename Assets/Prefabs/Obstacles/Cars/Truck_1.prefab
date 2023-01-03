@@ -193,6 +193,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f696f432893979a488b9c77b94c2599d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 30312c9327e688244a5af0a96bacabcb, type: 2}
+    - target: {fileID: -7511558181221131132, guid: f696f432893979a488b9c77b94c2599d, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: c86c2219cdff9114483147ae82fbc646, type: 2}
+    - target: {fileID: -4642546584337283361, guid: f696f432893979a488b9c77b94c2599d, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: c86c2219cdff9114483147ae82fbc646, type: 2}
     - target: {fileID: 919132149155446097, guid: f696f432893979a488b9c77b94c2599d, type: 3}
       propertyPath: m_Name
       value: Truck_1
