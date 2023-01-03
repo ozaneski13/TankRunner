@@ -9,6 +9,9 @@ public class Obstacle_Car_Movement : MonoBehaviour
     [Header("Rotate Settings")]
     [SerializeField] private float _spinCoef = 5f;
 
+    [Header("Test")]
+    [SerializeField] private bool _canDestroyCoins = false;
+
     private List<Transform> _wheels = null;
 
     private Rigidbody _rigidbody = null;
@@ -35,7 +38,7 @@ public class Obstacle_Car_Movement : MonoBehaviour
         if (other.gameObject.tag == "Obstacle")
             gameObject.SetActive(false);
 
-        if (other.gameObject.tag == "Collectable")
+        if (other.gameObject.tag == "Collectable" && _canDestroyCoins)
             other.gameObject.SetActive(false);
     }
 
