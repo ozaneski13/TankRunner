@@ -4,6 +4,7 @@ toplanan/yok edilen coinler tekrar düzgün spawn oluyor mu? roadmanager tek pre
 zıplama anim? dust effect on buldoze/fire anim/obstacle blowup anim/collectable collected anim ya da clink sound
 ingame gölgelerde bozukluk
 
+zıplama ve ateşte power up kullanım countu UIda görünsün
 can 0ken çarpınca kaybettir endgame ui playerın save edilmesi vsvs
 Sounds in Mechanics
 UI (end game score board)
