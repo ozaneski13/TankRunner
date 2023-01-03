@@ -25,6 +25,11 @@ public class TapController : MonoBehaviour
                 StartCoroutine(SingleOrDoubleTap());
             }
         }
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            _player.PowerUpController.Fire();
+        }
     }
 
     private IEnumerator SingleOrDoubleTap()

@@ -1,5 +1,6 @@
 ﻿TODO
 
+toplanan/yok edilen coinler tekrar düzgün spawn oluyor mu? roadmanager tek prefab koy dene
 zıplama anim? dust effect on buldoze/fire anim/obstacle blowup anim/collectable collected anim ya da clink sound
 ingame gölgelerde bozukluk
 

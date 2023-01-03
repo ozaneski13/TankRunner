@@ -32,10 +32,11 @@ public class Obstacle_Car_Movement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag != "Obstacle")
-            return;
+        if (other.gameObject.tag == "Obstacle")
+            gameObject.SetActive(false);
 
-        gameObject.SetActive(false);
+        if (other.gameObject.tag == "Collectable")
+            other.gameObject.SetActive(false);
     }
 
     private void RotateWheels()
