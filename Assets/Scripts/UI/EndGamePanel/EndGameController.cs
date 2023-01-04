@@ -9,9 +9,11 @@ public class EndGameController : MonoBehaviour
     private string GameSceneName = "GameScene";
 
     [SerializeField]
-    private GameObject EndGamePanel;
+    private EndGamePanelController EndGamePanel;
     [SerializeField]
     FadeController FC;
+    [SerializeField]
+    ScoreController SC;
 
     private void Start()
     {
@@ -29,12 +31,15 @@ public class EndGameController : MonoBehaviour
         if (Player.Instance.Tank.TankHealth.GetHealth() < 1)
         {
             ActivateEndGamePanel();
+            SC.SetGameContinues(false);
         }
     }
 
     private void ActivateEndGamePanel()
     {
-        EndGamePanel.SetActive(true);
+        EndGamePanel.gameObject.SetActive(true);
+        EndGamePanel.CurrentScore.text = SC.GetScore().ToString();
+        EndGamePanel.HighScore.text = Player.Instance.HighScore.ToString();
         Time.timeScale = 0.01f;
     }
 
@@ -61,6 +66,7 @@ public class EndGameController : MonoBehaviour
             MusicManager.Instance.SetToGameMusic();
         }
         Player.Instance.Tank.TankHealth.IncreaseHealth(1000);
+        SC.SetGameContinues(true);
         SceneManager.LoadScene(GameSceneName);
     }
 
@@ -73,6 +79,7 @@ public class EndGameController : MonoBehaviour
             MusicManager.Instance.SetToMenuMusic();
         }
         Player.Instance.Tank.TankHealth.IncreaseHealth(1000);
+        SC.SetGameContinues(true);
         SceneManager.LoadScene(MainMenuName);
     }
 

@@ -5,14 +5,14 @@ using UnityEngine;
 public class EndGamePanelController : MonoBehaviour
 {
     [SerializeField]
-    private TMPro.TextMeshProUGUI CurrentScore;
+    public TMPro.TextMeshProUGUI CurrentScore;
     [SerializeField]
-    private TMPro.TextMeshProUGUI MaxScore;
+    public TMPro.TextMeshProUGUI HighScore;
 
     void Start()
     {
         CurrentScore.text = PointManager.Instance.TotalPointGain.ToString();
-        MaxScore.text = Player.Instance.HighScore.ToString();
+        HighScore.text = Player.Instance.HighScore.ToString();
     }
 
 
