@@ -9,6 +9,7 @@ can 0ken çarpınca kaybettir endgame ui playerın save edilmesi vsvs
 Sounds in Mechanics
 UI (end game score board)
 Marketten Direk oyuna başlama
+Oyun sonunda power up'ları sıfırlama
 
 cinemachine start camera effects
 Day-Night?

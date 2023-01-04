@@ -31,7 +31,7 @@ public class Tank_Health : MonoBehaviour
     {
         if (_currentHealth - damage <= 0)
         {
-            ;//Game Over
+            _currentHealth = 0;//Game Over
             return;
         }
 
