@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Usable_Coin : Usables
 {
@@ -21,6 +22,14 @@ public class Usable_Coin : Usables
     {
         base.Awake();
         _startTransform = transform;
+    }
+
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().name != "GameScene")
+        {
+            transform.gameObject.SetActive(false); 
+        }
     }
 
     private void Update()
