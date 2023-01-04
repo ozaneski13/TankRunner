@@ -8,6 +8,7 @@ zıplama ve ateşte power up kullanım countu UIda görünsün
 can 0ken çarpınca kaybettir endgame ui playerın save edilmesi vsvs
 Sounds in Mechanics
 UI (end game score board)
+Marketten Direk oyuna başlama
 
 cinemachine start camera effects
 Day-Night?
