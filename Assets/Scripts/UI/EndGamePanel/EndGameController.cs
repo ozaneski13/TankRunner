@@ -40,6 +40,7 @@ public class EndGameController : MonoBehaviour
         EndGamePanel.gameObject.SetActive(true);
         EndGamePanel.CurrentScore.text = SC.GetScore().ToString();
         EndGamePanel.HighScore.text = Player.Instance.HighScore.ToString();
+        //Player.Instance.SaveGame()
         Time.timeScale = 0.01f;
     }
 
