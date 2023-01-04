@@ -5,11 +5,11 @@ zıplama anim? dust effect on buldoze/fire anim/obstacle blowup anim/collectable
 ingame gölgelerde bozukluk
 
 zıplama ve ateşte power up kullanım countu UIda görünsün
-can 0ken çarpınca kaybettir endgame ui playerın save edilmesi vsvs
 Sounds in Mechanics
-UI (end game score board)
 Marketten Direk oyuna başlama
 Oyun sonunda power up'ları sıfırlama
+//can 0ken çarpınca kaybettir endgame ui playerın save edilmesi vsvs
+//UI (end game score board)
 
 cinemachine start camera effects
 Day-Night?
