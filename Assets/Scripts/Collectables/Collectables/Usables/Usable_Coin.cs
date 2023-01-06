@@ -7,8 +7,6 @@ public class Usable_Coin : Usables
     [SerializeField] private float _moveSpeed = 10f;
     [SerializeField] private float _point = 100f;
 
-    private Transform _startTransform = null;
-
     private bool _isMagnetic = false;
 
     public override void PlayerCollided()
@@ -21,7 +19,6 @@ public class Usable_Coin : Usables
     public override void Awake()
     {
         base.Awake();
-        _startTransform = transform;
     }
 
     private void Start()
@@ -52,8 +49,5 @@ public class Usable_Coin : Usables
     private void OnDisable()
     {
         _isMagnetic = false;
-
-        transform.position = _startTransform.position;
-        transform.rotation = _startTransform.rotation;
     }
 }

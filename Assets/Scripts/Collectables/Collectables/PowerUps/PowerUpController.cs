@@ -98,6 +98,11 @@ public class PowerUpController : MonoBehaviour
         StartCoroutine(_powerUpRoutine);
     }
 
+    public void TestJump()
+    {
+        _tank.TankJump.Jump();
+    }
+
     public void Jump()
     {
         if (_tank.TankJump.IsGrounded && _tank.GetStatus() == EStatus.Jump && _powerUpUseCount != 0)

@@ -3,22 +3,21 @@ using UnityEngine;
 public class Tank_Jump : MonoBehaviour
 {
     [Header("Jump Settings")]
-    [SerializeField] private float _jumpForce = 200f;
     [SerializeField] private float _jumpShakeIntensity = 0.5f;
 
-    private Rigidbody _rb = null;
+    private Animator _jumpAnimator = null;
 
     private bool _isGrounded = true;
     public bool IsGrounded => _isGrounded;
 
     private void Awake()
     {
-        _rb = GetComponent<Rigidbody>();
+        _jumpAnimator = GetComponent<Animator>();
     }
 
     public void Jump()
     {
-        _rb.AddForce(transform.up * _jumpForce);
+        _jumpAnimator.Play("TankJump");
     }
 
     private void OnCollisionEnter(Collision collision)

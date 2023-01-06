@@ -28,6 +28,9 @@ public class Tank : MonoBehaviour
     public CinemachineController CinemachineController => _cinemachineController;
     [SerializeField] private float _intensity = 0.3f;
 
+    [Header("Buldoze Particles")]
+    [SerializeField] private Transform _buldozeParticles = null;
+
     private List<Material> materials = new List<Material>();
 
     private EStatus _currentStatus = EStatus.Normal;
@@ -116,13 +119,23 @@ public class Tank : MonoBehaviour
         _isImmune = status;
 
         if (_currentStatus == EStatus.Buldozer)
+        {
             _cinemachineController.ShakeCamera(_intensity);
+
+            if (!_buldozeParticles.gameObject.activeInHierarchy)
+                _buldozeParticles.gameObject.SetActive(true);
+        }
 
         else if (_currentStatus == EStatus.Jump && status)
             return;
 
-        else if (_currentStatus != EStatus.Buldozer || (_currentStatus == EStatus.Jump && !status)) 
+        else if (_currentStatus != EStatus.Buldozer || (_currentStatus == EStatus.Jump && !status))
+        {
             _cinemachineController.ShakeCamera(0);
+
+            if (_buldozeParticles.gameObject.activeInHierarchy)
+                _buldozeParticles.gameObject.SetActive(false);
+        }
     }
 
     public void ImmuneStatus(bool status)

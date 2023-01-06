@@ -5,14 +5,21 @@ public abstract class Collectable : MonoBehaviour, ICollectable
     private MeshRenderer[] _meshRenderers = null;
     private Collider[] _colliders = null;
 
+    private Transform _startTransform = null;
+
     public virtual void Awake()
     {
         _meshRenderers = GetComponentsInChildren<MeshRenderer>();
         _colliders = GetComponentsInChildren<Collider>();
+
+        _startTransform = transform;
     }
 
     private void OnEnable()
     {
+        transform.position = _startTransform.position;
+        transform.rotation = _startTransform.rotation;
+
         foreach (MeshRenderer meshRenderer in _meshRenderers)
             meshRenderer.enabled = true;
 

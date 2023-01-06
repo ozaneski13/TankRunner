@@ -21,7 +21,7 @@ public class TapController : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            Player.Instance.PowerUpController.Jump();
+            Player.Instance.PowerUpController.TestJump();
         }
     }
 
