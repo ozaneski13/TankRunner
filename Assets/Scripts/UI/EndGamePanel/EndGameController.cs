@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,8 @@ public class EndGameController : MonoBehaviour
     FadeController FC;
     [SerializeField]
     ScoreController SC;
+
+    [SerializeField] private CinemachineVirtualCamera _perlin = null;
 
     private void Start()
     {
@@ -42,6 +45,8 @@ public class EndGameController : MonoBehaviour
         EndGamePanel.HighScore.text = Player.Instance.HighScore.ToString();
         Player.Instance.SaveGame();
         Time.timeScale = 0.01f;
+
+        _perlin.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 0;
     }
 
     public void OnRestartButtonClicked()
