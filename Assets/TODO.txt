@@ -5,10 +5,11 @@ immune check bug
 obstacle blowup anim/collectable clink sound
 Oyun bitince poweruplar devam ediyor
 
-font değiştirilmesi
+End Game Panel güncellenecek
 zıplama ve ateşte power up kullanım countu UIda görünsün
 Sounds in Mechanics
 marketten highscore ile tank satın alma
+//font değiştirilmesi
 //scoreun x saniyede bir güncellenmesi ölündüğünde 5 saniye bitmeden uia yazılması
 //Marketten Direk oyuna başlama
 
