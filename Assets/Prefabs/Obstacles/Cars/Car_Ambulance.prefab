@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -7881759856481652390}
   - component: {fileID: -351290209373305283}
   - component: {fileID: -7208920190320312618}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Car_Ambulance
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -93,6 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 100
   _spinCoef: 50
+  _canDestroyCoins: 0
 --- !u!114 &-7208920190320312618
 MonoBehaviour:
   m_ObjectHideFlags: 0
