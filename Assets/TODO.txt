@@ -1,8 +1,7 @@
 ﻿TODO
 
-coin bug
 immune check bug
-obstacle blowup anim/collectable clink sound
+collectable clink sound
 Oyun bitince poweruplar devam ediyor
 
 End Game Panel güncellenecek

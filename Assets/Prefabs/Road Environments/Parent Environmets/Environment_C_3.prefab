@@ -225,6 +225,70 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_Environment_25
       objectReference: {fileID: 0}
+    - target: {fileID: 774439126943294087, guid: 37d2d2a972964c649b391cee4059b944, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 848170174647779439, guid: 37d2d2a972964c649b391cee4059b944, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 984597116539508650, guid: 37d2d2a972964c649b391cee4059b944, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1071735922912440557, guid: 37d2d2a972964c649b391cee4059b944, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2750797599826788665, guid: 37d2d2a972964c649b391cee4059b944, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104366645068928428, guid: 37d2d2a972964c649b391cee4059b944, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4149141303235435659, guid: 37d2d2a972964c649b391cee4059b944, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4265852646200119229, guid: 37d2d2a972964c649b391cee4059b944, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4633177484186612508, guid: 37d2d2a972964c649b391cee4059b944, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4696497810767591995, guid: 37d2d2a972964c649b391cee4059b944, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866882157574318349, guid: 37d2d2a972964c649b391cee4059b944, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6815408860340168585, guid: 37d2d2a972964c649b391cee4059b944, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8216436678551798839, guid: 37d2d2a972964c649b391cee4059b944, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8321728176908281567, guid: 37d2d2a972964c649b391cee4059b944, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435246725315850522, guid: 37d2d2a972964c649b391cee4059b944, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8531625071493830237, guid: 37d2d2a972964c649b391cee4059b944, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37d2d2a972964c649b391cee4059b944, type: 3}
 --- !u!4 &1720683048653756755 stripped
@@ -635,6 +699,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7778230867958333298}
     m_Modifications:
+    - target: {fileID: 522410903350505482, guid: 2483b44a2da76d6469c70716aa9ab60c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 642668534827192729, guid: 2483b44a2da76d6469c70716aa9ab60c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 684923187731806990, guid: 2483b44a2da76d6469c70716aa9ab60c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3135919679798971062, guid: 2483b44a2da76d6469c70716aa9ab60c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3187314461417099733, guid: 2483b44a2da76d6469c70716aa9ab60c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3607432783791314789, guid: 2483b44a2da76d6469c70716aa9ab60c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3711238257011740544, guid: 2483b44a2da76d6469c70716aa9ab60c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3802805286053517088, guid: 2483b44a2da76d6469c70716aa9ab60c, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -683,6 +775,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_Environment_24
       objectReference: {fileID: 0}
+    - target: {fileID: 3868230100442057734, guid: 2483b44a2da76d6469c70716aa9ab60c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241049272385106237, guid: 2483b44a2da76d6469c70716aa9ab60c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7071679758601309879, guid: 2483b44a2da76d6469c70716aa9ab60c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7826421303859054003, guid: 2483b44a2da76d6469c70716aa9ab60c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7923917619412676388, guid: 2483b44a2da76d6469c70716aa9ab60c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2483b44a2da76d6469c70716aa9ab60c, type: 3}
 --- !u!4 &6673758169812967428 stripped
@@ -697,6 +809,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7778230867958333298}
     m_Modifications:
+    - target: {fileID: 1069895828156162950, guid: 6f8cd87834575c149bb389fde36a7e53, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1250359514757519474, guid: 6f8cd87834575c149bb389fde36a7e53, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1282323301783987965, guid: 6f8cd87834575c149bb389fde36a7e53, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708204887501122545, guid: 6f8cd87834575c149bb389fde36a7e53, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644414228216949407, guid: 6f8cd87834575c149bb389fde36a7e53, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8378513820063753935, guid: 6f8cd87834575c149bb389fde36a7e53, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8419449304148957248, guid: 6f8cd87834575c149bb389fde36a7e53, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8564666617109515148, guid: 6f8cd87834575c149bb389fde36a7e53, type: 3}
       propertyPath: m_Name
       value: Road_Environment_26
@@ -743,6 +883,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8564666617109515151, guid: 6f8cd87834575c149bb389fde36a7e53, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9068980841703580392, guid: 6f8cd87834575c149bb389fde36a7e53, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
