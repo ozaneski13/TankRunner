@@ -1,6 +1,5 @@
 ﻿TODO
 
-oyun bittiğinde shake durdur
 kamera follow
 immune check bug
 obstacle blowup anim/collectable clink sound

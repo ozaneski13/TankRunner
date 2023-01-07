@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -2934350786704108072}
   - component: {fileID: -4348856466105999478}
   - component: {fileID: 7163346473979757138}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Garbage_Truck
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -93,6 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 100
   _spinCoef: 50
+  _canDestroyCoins: 0
 --- !u!114 &7163346473979757138
 MonoBehaviour:
   m_ObjectHideFlags: 0

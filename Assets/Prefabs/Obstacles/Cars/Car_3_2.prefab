@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4769003898900816699}
   - component: {fileID: 3292313599820248718}
   - component: {fileID: 6734780888709494244}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Car_3_2
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -93,6 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 100
   _spinCoef: 50
+  _canDestroyCoins: 0
 --- !u!114 &6734780888709494244
 MonoBehaviour:
   m_ObjectHideFlags: 0
