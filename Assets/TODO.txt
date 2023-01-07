@@ -1,6 +1,6 @@
 ﻿TODO
 
-obstacle blowup anim/collectable collected anim ya da clink sound
+obstacle blowup anim/clink sound
 ingame gölgelerde bozukluk
 
 zıplama ve ateşte power up kullanım countu UIda görünsün
