@@ -9,6 +9,7 @@ public class MarketManager : MonoBehaviour
 {
 
     public string MainMenuName = "MainMenu";
+    public string GameSceneName = "GameScene";
 
     public static MarketManager Instance = null;
 
@@ -210,6 +211,13 @@ public class MarketManager : MonoBehaviour
         fC.ActivateFadeOut();
     }
 
+    public void OnPlayButtonClicked()
+    {
+        ActivateCurrentTankModel();
+        StartCoroutine(LoadGameSceneuWithDelay());
+        fC.ActivateFadeOut();
+    }
+
     private void ActivateCurrentTankModel()
     {
         Player.Instance.TankPrefabs[(int)(Player.Instance.CurrentTank)].gameObject.SetActive(true);
@@ -221,4 +229,9 @@ public class MarketManager : MonoBehaviour
         SceneManager.LoadScene(MainMenuName);
     }
 
+    IEnumerator LoadGameSceneuWithDelay()
+    {
+        yield return new WaitForSeconds(.8f);
+        SceneManager.LoadScene(GameSceneName);
+    }
 }
