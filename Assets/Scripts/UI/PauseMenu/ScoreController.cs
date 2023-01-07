@@ -7,7 +7,7 @@ public class ScoreController : MonoBehaviour
 {
     [SerializeField]
     private TMPro.TextMeshProUGUI TextMeshPro;
-    
+
     private float score = 0;
     private float roadScore = 0;
     private bool isGameContinue = true;
@@ -16,10 +16,15 @@ public class ScoreController : MonoBehaviour
     {
         roadScore += RoadManager.Instance.RoadTreadmill.CurrentSpeed;
         score = PointManager.Instance.TotalPointGain + roadScore;
-        if(Player.Instance.HighScore < (int)score)
+        if (Player.Instance.HighScore < (int)score)
         {
             Player.Instance.HighScore = (int)score;
         }
+    }
+    private void Start()
+    {
+        StartCoroutine(UpdateScoreInSeconds());
+        TextMeshPro.text = ((int)score).ToString();
     }
 
     private void FixedUpdate()
@@ -27,13 +32,25 @@ public class ScoreController : MonoBehaviour
         if (isGameContinue)
         {
             CalculateScore();
-            TextMeshPro.text = ((int)score).ToString();
+            //TextMeshPro.text = ((int)score).ToString();
         }
     }
 
     public void SetGameContinue(bool inputBool)
     {
-        isGameContinue= inputBool;
+        isGameContinue = inputBool;
+    }
+
+    IEnumerator UpdateScoreInSeconds()
+    {
+        while (true)
+        {
+            if (isGameContinue)
+            {
+                yield return new WaitForSeconds(3);
+                TextMeshPro.text = ((int)score).ToString();
+            }
+        }
     }
 
     public float GetScore()
