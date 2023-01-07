@@ -4,20 +4,21 @@ public class Tank_Jump : MonoBehaviour
 {
     [Header("Jump Settings")]
     [SerializeField] private float _jumpShakeIntensity = 0.5f;
+    [SerializeField] private float _jumpForce = 200f;
 
-    private Animator _jumpAnimator = null;
+    private Rigidbody _rb = null;
 
     private bool _isGrounded = true;
     public bool IsGrounded => _isGrounded;
 
     private void Awake()
     {
-        _jumpAnimator = GetComponent<Animator>();
+        _rb = GetComponent<Rigidbody>();
     }
 
     public void Jump()
     {
-        _jumpAnimator.Play("TankJump");
+        _rb.AddForce(transform.up * _jumpForce);
     }
 
     private void OnCollisionEnter(Collision collision)

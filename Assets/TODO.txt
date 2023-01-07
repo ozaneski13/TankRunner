@@ -1,6 +1,5 @@
 ﻿TODO
 
-köprülere çarpmayacaksak ve coinlerin konumuna göre 2.colliderı kaldır
 obstacle blowup anim/collectable collected anim ya da clink sound
 ingame gölgelerde bozukluk
 
