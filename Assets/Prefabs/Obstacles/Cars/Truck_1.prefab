@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: -1828379382289645528}
   - component: {fileID: 7556124648106623756}
   - component: {fileID: -3883662042926167263}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Truck_1
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -124,6 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 100
   _spinCoef: 50
+  _canDestroyCoins: 0
 --- !u!114 &-3883662042926167263
 MonoBehaviour:
   m_ObjectHideFlags: 0
