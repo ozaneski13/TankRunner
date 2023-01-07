@@ -4,6 +4,9 @@ public class Obstacle : Collectable
 {
     [Header("Obstacle Settings")]
     [SerializeField] private int _damage = 1;
+
+    [SerializeField] private GameObject _particleSystem = null;
+
     public int Damage => _damage;
     [SerializeField] private float _blowUpPoint = 100f;
 
@@ -29,6 +32,9 @@ public class Obstacle : Collectable
 
     private void ToggleObstacles(bool toggle)
     {
+        if (GetComponent<Obstacle_Car_Movement>() != null) 
+            _particleSystem.SetActive(!toggle);
+
         MeshRenderer[] meshRenderers = GetComponentsInChildren<MeshRenderer>();
         Collider[] colliders = GetComponentsInChildren<Collider>();
 
@@ -41,6 +47,9 @@ public class Obstacle : Collectable
 
     public override void PlayerCollided()
     {
+        if (GetComponent<Obstacle_Car_Movement>() != null)
+            _particleSystem.SetActive(true);
+
         base.PlayerCollided();
     }
 

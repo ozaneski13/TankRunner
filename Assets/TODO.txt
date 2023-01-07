@@ -1,6 +1,6 @@
 ﻿TODO
 
-kamera follow
+coin bug
 immune check bug
 obstacle blowup anim/collectable clink sound
 Oyun bitince poweruplar devam ediyor

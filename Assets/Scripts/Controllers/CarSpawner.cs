@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CarSpawner : MonoBehaviour
@@ -9,6 +10,7 @@ public class CarSpawner : MonoBehaviour
     [SerializeField] private Transform _carPoolParent = null;
     [SerializeField] private float _maxDurationBeforeSpawn = 3f;
     [SerializeField] private float _minDurationBeforeSpawn = 6f;
+    [SerializeField] private int _maxSpawnCount = 2;
 
     private List<Transform> _carPool = new List<Transform>();
 
@@ -29,9 +31,13 @@ public class CarSpawner : MonoBehaviour
 
     private void FillCarPool()
     {
-        foreach (Transform car in _carPrefabs)
+        var random = new System.Random();
+
+        _carPrefabs = _carPrefabs.OrderBy(_ => random.Next()).ToList();
+
+        for (int i = 0; i < _maxSpawnCount; i++)
         {
-            Transform tempTransform = Instantiate(car, transform.position, car.transform.rotation, _carPoolParent);
+            Transform tempTransform = Instantiate(_carPrefabs[i], transform.position, _carPrefabs[i].transform.rotation, _carPoolParent);
             tempTransform.gameObject.SetActive(false);
 
             _carPool.Add(tempTransform);
