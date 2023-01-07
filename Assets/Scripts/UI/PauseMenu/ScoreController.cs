@@ -10,7 +10,7 @@ public class ScoreController : MonoBehaviour
     
     private float score = 0;
     private float roadScore = 0;
-    private bool isGameContinues = true;
+    private bool isGameContinue = true;
 
     private void CalculateScore()
     {
@@ -24,16 +24,16 @@ public class ScoreController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isGameContinues)
+        if (isGameContinue)
         {
             CalculateScore();
             TextMeshPro.text = ((int)score).ToString();
         }
     }
 
-    public void SetGameContinues(bool inputBool)
+    public void SetGameContinue(bool inputBool)
     {
-        isGameContinues= inputBool;
+        isGameContinue= inputBool;
     }
 
     public float GetScore()

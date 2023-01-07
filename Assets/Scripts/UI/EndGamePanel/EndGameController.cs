@@ -31,7 +31,7 @@ public class EndGameController : MonoBehaviour
         if (Player.Instance.Tank.TankHealth.GetHealth() < 1)
         {
             ActivateEndGamePanel();
-            SC.SetGameContinues(false);
+            SC.SetGameContinue(false);
         }
     }
 
@@ -40,7 +40,7 @@ public class EndGameController : MonoBehaviour
         EndGamePanel.gameObject.SetActive(true);
         EndGamePanel.CurrentScore.text = SC.GetScore().ToString();
         EndGamePanel.HighScore.text = Player.Instance.HighScore.ToString();
-        //Player.Instance.SaveGame()
+        Player.Instance.SaveGame();
         Time.timeScale = 0.01f;
     }
 
@@ -67,7 +67,7 @@ public class EndGameController : MonoBehaviour
             MusicManager.Instance.SetToGameMusic();
         }
         Player.Instance.Tank.TankHealth.IncreaseHealth(1000);
-        SC.SetGameContinues(true);
+        SC.SetGameContinue(true);
         SceneManager.LoadScene(GameSceneName);
     }
 
@@ -80,7 +80,7 @@ public class EndGameController : MonoBehaviour
             MusicManager.Instance.SetToMenuMusic();
         }
         Player.Instance.Tank.TankHealth.IncreaseHealth(1000);
-        SC.SetGameContinues(true);
+        SC.SetGameContinue(true);
         SceneManager.LoadScene(MainMenuName);
     }
 
