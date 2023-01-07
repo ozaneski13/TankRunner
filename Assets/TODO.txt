@@ -1,15 +1,17 @@
 ﻿TODO
 
-obstacle blowup anim/clink sound
-ingame gölgelerde bozukluk
+oyun bittiğinde shake durdur
+kamera follow
+immune check bug
+obstacle blowup anim/collectable clink sound
+Oyun bitince poweruplar devam ediyor
 
+font değiştirilmesi
+scoreun x saniyede bir güncellenmesi ölündüğünde 5 saniye bitmeden uia yazılması
 zıplama ve ateşte power up kullanım countu UIda görünsün
 Sounds in Mechanics
 Marketten Direk oyuna başlama
-Oyun sonunda power up'ları sıfırlama
+marketten highscore ile tank satın alma
 //can 0ken çarpınca kaybettir endgame ui playerın save edilmesi vsvs
-//UI (end game score board)
 
-cinemachine start camera effects
-Day-Night?
-Add light to street lambs at night time?
+powerupların ve obstacleların yer düzenlemesi

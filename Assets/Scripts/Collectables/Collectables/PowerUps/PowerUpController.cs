@@ -75,6 +75,11 @@ public class PowerUpController : MonoBehaviour
         }
     }
 
+    public void TestFire()
+    {
+        _tank.TankFire.Fire();
+    }
+
     private IEnumerator ReloadRoutine()
     {
         _canShoot = false;

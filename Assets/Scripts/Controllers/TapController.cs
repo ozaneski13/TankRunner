@@ -23,6 +23,11 @@ public class TapController : MonoBehaviour
         {
             Player.Instance.PowerUpController.TestJump();
         }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Player.Instance.PowerUpController.TestFire();
+        }
     }
 
     private IEnumerator SingleOrDoubleTap()
