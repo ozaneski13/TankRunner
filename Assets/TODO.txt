@@ -4,9 +4,9 @@ immune check bug
 collectable clink sound
 Oyun bitince poweruplar devam ediyor
 
-End Game Panel'de current score arttırıyor
 Sounds in Mechanics
 marketten highscore ile tank satın alma
+//End Game Panel'de current score arttırıyor
 //End Game Panel güncellenecek
 //zıplama ve ateşte power up kullanım countu UIda görünsün
 //font değiştirilmesi

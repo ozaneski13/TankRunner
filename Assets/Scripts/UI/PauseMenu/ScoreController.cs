@@ -28,7 +28,7 @@ public class ScoreController : MonoBehaviour
         TextMeshPro.text = ((int)score).ToString();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (isGameContinue)
         {

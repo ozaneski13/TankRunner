@@ -11,9 +11,9 @@ public class EndGamePanelController : MonoBehaviour
 
     void Start()
     {
-        CurrentScore.text = PointManager.Instance.TotalPointGain.ToString();
-        HighScore.text = Player.Instance.HighScore.ToString();
-        Player.Instance.Tank.GetStatus();
+        //CurrentScore.text = PointManager.Instance.TotalPointGain.ToString();
+        //HighScore.text = Player.Instance.HighScore.ToString();
+        //Player.Instance.Tank.GetStatus();
     }
 
 
