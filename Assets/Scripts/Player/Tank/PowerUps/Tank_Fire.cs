@@ -25,7 +25,10 @@ public class Tank_Fire : MonoBehaviour
         Collider[] hits = Physics.OverlapBox(_fireBox.position, _fireBox.localScale/2, Quaternion.identity ,_hitLayers);
 
         foreach (Collider hit in hits)
+        {
             hit.GetComponent<Obstacle>().PlayerCollided();
+            ScoreController.Instance.AddDamageToObstacleScore(hit.GetComponent<Obstacle>().Damage);
+        }
 
         StartCoroutine(FireShakeRoutine());
     }

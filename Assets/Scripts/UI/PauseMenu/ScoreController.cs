@@ -5,17 +5,31 @@ using UnityEngine;
 
 public class ScoreController : MonoBehaviour
 {
+    public static ScoreController Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
+    }
+    
     [SerializeField]
     private TMPro.TextMeshProUGUI TextMeshPro;
 
     private float score = 0;
     private float roadScore = 0;
+    private float obstacleScore = 0;
     private bool isGameContinue = true;
 
     private void CalculateScore()
     {
-        //roadScore += RoadManager.Instance.RoadTreadmill.CurrentSpeed;
-        score = PointManager.Instance.TotalPointGain + roadScore;
+        score = PointManager.Instance.TotalPointGain + roadScore + obstacleScore;
         TextMeshPro.text = ((int)score).ToString();
         if (Player.Instance.HighScore < (int)score)
         {
@@ -24,6 +38,9 @@ public class ScoreController : MonoBehaviour
     }
     private void Start()
     {
+        score = 0;
+        roadScore = 0;
+        obstacleScore = 0;
         StartCoroutine(UpdateScoreInSeconds());
         TextMeshPro.text = ((int)score).ToString();
     }
@@ -53,6 +70,11 @@ public class ScoreController : MonoBehaviour
                 //TextMeshPro.text = ((int)score).ToString();
             }
         }
+    }
+
+    public void AddDamageToObstacleScore(int AnyObstacleScore)
+    {
+        obstacleScore += AnyObstacleScore * 50;
     }
 
     public float GetScore()

@@ -58,6 +58,8 @@ public class Tank : MonoBehaviour
         {
             _tankHealth.DecreaseHealth(other.gameObject.GetComponent<Obstacle>().Damage);
 
+            ScoreController.Instance.AddDamageToObstacleScore(other.gameObject.GetComponent<Obstacle>().Damage);
+
             RoadManager.Instance.RoadTreadmill.TankCrashed();
             
             if(!_isRoutineActive)
