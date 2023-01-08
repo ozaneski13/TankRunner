@@ -14,8 +14,9 @@ public class ScoreController : MonoBehaviour
 
     private void CalculateScore()
     {
-        roadScore += RoadManager.Instance.RoadTreadmill.CurrentSpeed;
+        //roadScore += RoadManager.Instance.RoadTreadmill.CurrentSpeed;
         score = PointManager.Instance.TotalPointGain + roadScore;
+        TextMeshPro.text = ((int)score).ToString();
         if (Player.Instance.HighScore < (int)score)
         {
             Player.Instance.HighScore = (int)score;
@@ -48,7 +49,8 @@ public class ScoreController : MonoBehaviour
             if (isGameContinue)
             {
                 yield return new WaitForSeconds(3);
-                TextMeshPro.text = ((int)score).ToString();
+                roadScore += RoadManager.Instance.RoadTreadmill.CurrentSpeed * 100f;
+                //TextMeshPro.text = ((int)score).ToString();
             }
         }
     }
