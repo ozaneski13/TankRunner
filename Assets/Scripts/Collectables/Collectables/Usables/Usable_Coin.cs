@@ -14,6 +14,8 @@ public class Usable_Coin : Usables
         base.PlayerCollided();
 
         PointManager.Instance.PointGained(_point);
+
+        CoinSoundController.Instance.CoinCollected();
     }
 
     public override void Awake()
