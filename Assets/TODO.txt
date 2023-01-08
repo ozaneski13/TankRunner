@@ -4,6 +4,7 @@ immune check bug
 collectable clink sound
 Oyun bitince poweruplar devam ediyor
 
+Score'a obstacle ve araç patlatma ekle
 Sounds in Mechanics
 marketten highscore ile tank satın alma
 //End Game Panel'de current score arttırıyor
