@@ -48,7 +48,7 @@ public class ScoreController : MonoBehaviour
         {
             if (isGameContinue)
             {
-                yield return new WaitForSeconds(3);
+                yield return new WaitForSeconds(5);
                 roadScore += RoadManager.Instance.RoadTreadmill.CurrentSpeed * 100f;
                 //TextMeshPro.text = ((int)score).ToString();
             }
