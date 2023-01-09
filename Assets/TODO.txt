@@ -7,4 +7,7 @@ Oyun bitince poweruplar devam ediyor
 Sounds in Mechanics
 marketten highscore ile tank satın alma
 
-powerupların ve obstacleların yer düzenlemesi
+powerupların ve obstacleların yer düzenlemesi -Yapıldı
+
+Markette tankların fiyatının gösterilmesi
+Market Gold fontunun renginin oyun içi ile aynı yapılması
