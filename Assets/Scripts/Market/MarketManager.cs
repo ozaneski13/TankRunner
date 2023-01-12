@@ -28,6 +28,8 @@ public class MarketManager : MonoBehaviour
     [SerializeField]
     private Image LockImage;
     [SerializeField]
+    private TMPro.TextMeshProUGUI TankPriceText;
+    [SerializeField]
     public List<int> TanksPerPrice;
     static bool isMoveActive = false;
     float ChangeSpeed = 10f;
@@ -75,6 +77,7 @@ public class MarketManager : MonoBehaviour
     {
         CheckSelectButtonStatus();
         CheckBuyButtonStatus();
+        CheckTankPriceStatus();
         //Debug.Log("SelectedTankIndex:" + SelectedTankIndex);    
     }
 
@@ -182,6 +185,14 @@ public class MarketManager : MonoBehaviour
                 BuyButton.gameObject.SetActive(true);
                 LockImage.gameObject.SetActive(true);
             }
+        }
+    }
+
+    private void CheckTankPriceStatus()
+    {
+        if(LockImage.gameObject.activeSelf)
+        {
+            TankPriceText.text = TanksPerPrice[RotationTankIndex].ToString();
         }
     }
 

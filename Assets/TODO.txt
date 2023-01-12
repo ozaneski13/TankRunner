@@ -9,5 +9,5 @@ marketten highscore ile tank satın alma
 
 powerupların ve obstacleların yer düzenlemesi -Yapıldı
 
-Markette tankların fiyatının gösterilmesi
+//Markette tankların fiyatının gösterilmesi
 //Market Gold fontunun renginin oyun içi ile aynı yapılması
