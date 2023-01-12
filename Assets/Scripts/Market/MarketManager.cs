@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -26,9 +27,18 @@ public class MarketManager : MonoBehaviour
     [SerializeField]
     private TMPro.TextMeshProUGUI GoldCountText;
     [SerializeField]
+    private TMPro.TextMeshProUGUI HighScoreText;
+    [SerializeField]
     private Image LockImage;
     [SerializeField]
+    private GameObject TankPriceWithGoldGameObject;
+    [SerializeField]
     private TMPro.TextMeshProUGUI TankPriceText;
+    [SerializeField]
+    private GameObject TankPriceWithHighScoreGameObject;
+    [SerializeField]
+    private TMPro.TextMeshProUGUI TankPriceHighScoreText;
+
     [SerializeField]
     public List<int> TanksPerPrice;
     static bool isMoveActive = false;
@@ -64,6 +74,9 @@ public class MarketManager : MonoBehaviour
         {
             Debug.LogError("Player does not exist");
         }
+
+        TankPriceHighScoreText.text = "High Score: " + TanksPerPrice[TanksPerPrice.Count - 1];
+        HighScoreText.text = "High Score: " + Player.Instance.HighScore;
     }
 
     private void DeactivateCurrentTankModel()
@@ -77,8 +90,7 @@ public class MarketManager : MonoBehaviour
     {
         CheckSelectButtonStatus();
         CheckBuyButtonStatus();
-        CheckTankPriceStatus();
-        //Debug.Log("SelectedTankIndex:" + SelectedTankIndex);    
+        CheckTankPriceStatus();  
     }
 
     private void SortTanks()
@@ -192,7 +204,17 @@ public class MarketManager : MonoBehaviour
     {
         if(LockImage.gameObject.activeSelf)
         {
-            TankPriceText.text = TanksPerPrice[RotationTankIndex].ToString();
+            if(RotationTankIndex < TanksPerPrice.Count - 1)
+            {
+                TankPriceWithGoldGameObject.gameObject.SetActive(true);
+                TankPriceWithHighScoreGameObject.gameObject.SetActive(false);
+                TankPriceText.text = TanksPerPrice[RotationTankIndex].ToString();
+            }
+            else
+            {
+                TankPriceWithGoldGameObject.gameObject.SetActive(false);
+                TankPriceWithHighScoreGameObject.gameObject.SetActive(true);
+            }
         }
     }
 
@@ -207,12 +229,23 @@ public class MarketManager : MonoBehaviour
 
     public void OnBuyButtonClicked()
     {
-        if(Player.Instance.CollectedGoldCount >= TanksPerPrice[RotationTankIndex])
+        if(RotationTankIndex < TanksPerPrice.Count-1)
         {
-            Player.Instance.BoughtTanks.Add((ETank)RotationTankIndex);
-            Player.Instance.CollectedGoldCount -= TanksPerPrice[RotationTankIndex];
-            GoldCountText.text = Player.Instance.CollectedGoldCount.ToString();
+            if(Player.Instance.CollectedGoldCount >= TanksPerPrice[RotationTankIndex])
+            {
+                Player.Instance.BoughtTanks.Add((ETank)RotationTankIndex);
+                Player.Instance.CollectedGoldCount -= TanksPerPrice[RotationTankIndex];
+                GoldCountText.text = Player.Instance.CollectedGoldCount.ToString();
+            }
         }
+        else if (RotationTankIndex == TanksPerPrice.Count-1)
+        {
+            if(Player.Instance.HighScore >= TanksPerPrice[RotationTankIndex])
+            {
+                Player.Instance.BoughtTanks.Add((ETank)RotationTankIndex);
+            }
+        }
+        
     }
 
     public void OnMainMenuClicked()
